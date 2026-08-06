@@ -185,11 +185,11 @@ function Index() {
         </div>
       </div>
 
-      {/* Recado adesivo */}
-      <div className="animate-float-2 absolute right-6 bottom-6 z-40 hidden rotate-3 md:right-12 md:bottom-12 md:block">
-        <div className="bg-note font-hand text-ink-soft relative w-40 p-4 text-center text-xl leading-tight shadow-[2px_2px_6px_rgba(0,0,0,0.1)]">
+      {/* Recado adesivo "nas horas vagas..." abaixo do botão Social Media */}
+      <div className="animate-float-2 absolute top-[57%] right-[11%] z-40 hidden -rotate-3 md:block">
+        <div className="bg-note font-hand text-ink-soft relative w-36 p-3 text-center text-lg leading-tight shadow-[2px_2px_6px_rgba(0,0,0,0.1)]">
           <div className="bg-pin border-pin-edge absolute -top-3 left-1/2 h-3 w-3 -translate-x-1/2 rounded-full border shadow-sm" />
-          Chegou até aqui?
+          nas horas vagas...
         </div>
       </div>
     </main>
