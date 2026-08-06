@@ -156,7 +156,7 @@ function Sobre() {
           </Link>
 
           {/* Loop Vertical de Tecnologias iniciando em Principais Competências e terminando em Aprendizado Rápido */}
-          <div className="mt-6 flex h-[620px] w-[240px] flex-col items-center justify-start overflow-hidden md:h-[790px] md:w-[280px]">
+          <div className="mt-6 flex h-[800px] w-[240px] flex-col items-center justify-start overflow-hidden md:h-[1050px] md:w-[280px]">
             <span className="font-display text-ink-soft mb-3 text-xs font-bold uppercase tracking-wider">
               Tecnologias & Ferramentas
             </span>
