@@ -273,7 +273,7 @@ function SocialMedia() {
             </span>
           </div>
 
-          <div className="mt-6 grid gap-6 sm:grid-cols-2">
+          <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {clientes.map((c) => (
               <div
                 key={c.id}
@@ -286,16 +286,16 @@ function SocialMedia() {
                     </span>
                     <span className="font-mono text-xs font-semibold opacity-80">{c.handle}</span>
                   </div>
-                  <h3 className="font-display mt-3 text-2xl font-bold">{c.titulo}</h3>
-                  <p className="font-hand text-ink-soft text-xl">{c.nicho}</p>
+                  <h3 className="font-display mt-3 text-xl font-bold">{c.titulo}</h3>
+                  <p className="font-hand text-ink-soft text-lg">{c.nicho}</p>
                 </div>
 
-                {/* Imagem da arte original do cliente */}
-                <div className="my-4 flex items-center justify-center overflow-hidden rounded border border-black/10 bg-paper/50 p-2 shadow-inner">
+                {/* Imagem da arte original do cliente ajustada ao tamanho real */}
+                <div className="my-4 flex w-full items-center justify-center overflow-hidden rounded border border-black/10 bg-paper/50 p-2 shadow-inner">
                   <img
                     src={c.imagem}
                     alt={`Arte e design para ${c.titulo}`}
-                    className="max-h-72 w-full object-contain rounded transition-transform duration-500 hover:scale-105"
+                    className="h-auto w-full object-contain rounded transition-transform duration-500 hover:scale-105"
                   />
                 </div>
 
