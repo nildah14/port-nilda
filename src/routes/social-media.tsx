@@ -1,12 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, Share2, Wrench, LayoutGrid, ImagePlus, MessageCircle, Video, ExternalLink } from "lucide-react";
 import dlFitnessImg from "@/assets/clientes/dl-fitness.jpeg";
-import meryTavaresImg from "@/assets/clientes/merytavares.jpeg";
-import ostramarImg from "@/assets/clientes/ostramar.jpeg";
-import todahoraImg from "@/assets/clientes/atacadão toda hora.jpeg";
-import abtecImg from "@/assets/clientes/abtec.jpeg";
-import oeconomicoImg from "@/assets/clientes/oeconomico.jpeg";
-import atacarejoImg from "@/assets/clientes/atacarejo.jpeg";
+import meryTavaresImg from "@/assets/clientes/merytavaress.png";
+import ostramarImg from "@/assets/clientes/ostramar.png";
+import oeconomicoImg from "@/assets/clientes/o economico.png";
+import abtecImg from "@/assets/clientes/abtec.png";
+import atacarejoImg from "@/assets/clientes/atacarejo.png";
 
 const clientes = [
   {
@@ -14,7 +13,7 @@ const clientes = [
     titulo: "Deniloi | Moda Fitness",
     handle: "@dl.fitness.oficial",
     nicho: "Moda & Estilo de Vida",
-    desc: "Criação de conteúdo visual, artes institucionais e posicionamento de marca no Instagram.",
+    desc: "Criação de conteúdo visual, catálogo de produtos e posicionamento de marca no Instagram.",
     imagem: dlFitnessImg,
     href: "https://www.instagram.com/dl.fitness.oficial/",
     color: "bg-accent-yellow",
@@ -44,11 +43,11 @@ const clientes = [
   },
   {
     id: 4,
-    titulo: "Atacadão Toda Hora",
+    titulo: "O Econômico / Atacadão",
     handle: "@todahoraatacarejo",
     nicho: "Atacado & Varejo",
-    desc: "Artes promocionais diárias, encartes de ofertas e vídeos para atração de clientes.",
-    imagem: todahoraImg,
+    desc: "Artes promocionais diárias, encartes de ofertas e comunicação visual para supermercados.",
+    imagem: oeconomicoImg,
     href: "https://www.instagram.com/todahoraatacarejo/",
     color: "bg-accent-pink",
     rot: "rotate-1",
@@ -58,7 +57,7 @@ const clientes = [
     titulo: "ABTEC | Tecnologia & Ensino",
     handle: "@abtec.oficial",
     nicho: "Educação & Tecnologia",
-    desc: "Comunicação visual, peças publicitárias e peças gráficas para cursos e treinamentos.",
+    desc: "Comunicação visual, peças publicitárias e artes para cursos e treinamentos.",
     imagem: abtecImg,
     href: null,
     color: "bg-card/90",
@@ -66,25 +65,14 @@ const clientes = [
   },
   {
     id: 6,
-    titulo: "O Econômico Supermercados",
-    handle: "@oeconomico",
-    nicho: "Supermercados & Varejo",
-    desc: "Design de encartes de ofertas, banners promocionais e peças para redes sociais.",
-    imagem: oeconomicoImg,
-    href: null,
-    color: "bg-accent-yellow",
-    rot: "rotate-2",
-  },
-  {
-    id: 7,
     titulo: "Atacarejo das Ofertas",
     handle: "@atacarejo",
     nicho: "Comércio & Atacarejo",
     desc: "Identidade visual promocional e peças de engajamento do cliente.",
     imagem: atacarejoImg,
     href: null,
-    color: "bg-accent-blue",
-    rot: "-rotate-1",
+    color: "bg-accent-yellow",
+    rot: "rotate-2",
   },
 ];
 
