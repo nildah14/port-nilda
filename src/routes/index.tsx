@@ -81,7 +81,7 @@ const botoes = [
 
 function Index() {
   return (
-    <main className="bg-paper text-ink relative flex min-h-screen w-full flex-col items-center justify-center gap-3 overflow-x-hidden p-4 sm:p-6 md:gap-0 md:p-12">
+    <main className="bg-paper text-ink relative flex min-h-screen w-full flex-col items-center justify-start gap-3 overflow-x-hidden p-4 pt-6 sm:p-6 md:justify-center md:gap-0 md:p-12">
       {/* Título Principal */}
       <h1 className="font-display text-center text-5xl font-extrabold tracking-tighter opacity-90 mix-blend-multiply sm:text-6xl md:text-[10rem] md:leading-[0.85] z-10">
         <span className="block origin-bottom-right -rotate-2 transform">OLÁ,</span>
