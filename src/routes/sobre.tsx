@@ -26,7 +26,7 @@ import { VscCode } from "react-icons/vsc";
 const techLogos: LogoItem[] = [
   { node: <VscCode className="text-[#007ACC]" />, title: "VS Code", ariaLabel: "VS Code" },
   { node: <FaJava className="text-[#007396]" />, title: "Java", ariaLabel: "Java" },
-  { node: <SiJavascript className="text-[#F7DF1E] bg-black rounded-xs p-0.5" />, title: "JavaScript", ariaLabel: "JavaScript" },
+  { node: <SiJavascript className="text-[#F7DF1E]" />, title: "JavaScript", ariaLabel: "JavaScript" },
   { node: <SiPython className="text-[#3776AB]" />, title: "Python", ariaLabel: "Python" },
   { node: <SiHtml5 className="text-[#E34F26]" />, title: "HTML5", ariaLabel: "HTML5" },
   { node: <FaCss3Alt className="text-[#1572B6]" />, title: "CSS3", ariaLabel: "CSS3" },
@@ -134,9 +134,9 @@ const techLogosCol2 = techLogos.slice(10);
 function Sobre() {
   return (
     <main className="bg-paper text-ink min-h-screen w-full overflow-x-hidden px-6 py-10 md:px-12 md:py-16">
-      <div className="mx-auto flex max-w-6xl flex-col gap-10 md:flex-row md:gap-16">
+      <div className="mx-auto flex max-w-6xl flex-col gap-10 md:flex-row md:items-stretch md:gap-16">
         {/* Foto e Loop de Tecnologias à esquerda */}
-        <div className="flex shrink-0 flex-col items-center gap-6 md:sticky md:top-12 md:h-fit md:items-start">
+        <div className="flex shrink-0 flex-col items-center gap-6 md:w-[280px] md:items-start md:self-stretch">
           <div className="sticker-effect relative">
             <div className="clip-paper relative h-[320px] w-[240px] overflow-hidden md:h-[380px] md:w-[280px]">
               <img
@@ -155,12 +155,12 @@ function Sobre() {
             </span>
           </Link>
 
-          {/* Loop Vertical de Tecnologias (2 colunas, fundo transparente da página, ícones maiores) */}
-          <div className="mt-4 flex w-[240px] flex-col items-center justify-center overflow-hidden md:w-[280px]">
+          {/* Loop Vertical de Tecnologias estendendo até o final do card de diferenciais */}
+          <div className="mt-4 flex min-h-[450px] w-[240px] flex-1 flex-col items-center justify-start overflow-hidden md:w-[280px]">
             <span className="font-display text-ink-soft mb-4 text-xs font-bold uppercase tracking-wider">
               Tecnologias & Ferramentas
             </span>
-            <div className="relative flex h-[280px] w-full items-center justify-center gap-8 overflow-hidden">
+            <div className="relative flex h-full min-h-[400px] w-full flex-1 items-center justify-center gap-8 overflow-hidden">
               <LogoLoop
                 logos={techLogosCol1}
                 speed={45}
