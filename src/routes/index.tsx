@@ -135,39 +135,54 @@ function Index() {
         })}
       </div>
 
-      {/* Layout Mobile (Responsivo em lista flexível sem sobreposição) */}
-      <div className="relative z-30 flex w-full flex-col items-center gap-4 py-4 md:hidden">
-        {botoes.map(({ href, label, Icon, color, hoverRot }) => {
-          const isWill = label === "Conheça Minha Trajetória";
+      {/* Layout Mobile (Responsivo: 2 botões na linha 1, 2 botões na linha 2, Trajetória abaixo de todos) */}
+      <div className="relative z-30 flex w-full flex-col items-center gap-3 py-4 md:hidden">
+        {/* Linha 1: Projetos Realizados + Sobre Mim */}
+        <div className="flex flex-wrap justify-center gap-3">
+          <Link to="/projetos" className="group">
+            <span className="font-display text-ink bg-accent-yellow active:scale-95 flex items-center gap-2 rounded-full border-2 border-transparent px-4 py-2.5 text-xs font-semibold shadow-[3px_3px_0px_rgba(0,0,0,0.15)] group-hover:-rotate-3">
+              <Briefcase size={16} aria-hidden="true" />
+              Projetos Realizados
+            </span>
+          </Link>
+          <Link to="/sobre" className="group">
+            <span className="font-display text-ink bg-accent-blue active:scale-95 flex items-center gap-2 rounded-full border-2 border-transparent px-4 py-2.5 text-xs font-semibold shadow-[3px_3px_0px_rgba(0,0,0,0.15)] group-hover:rotate-3">
+              <User size={16} aria-hidden="true" />
+              Sobre Mim
+            </span>
+          </Link>
+        </div>
 
-          const inner = (
-            <div className="relative inline-flex items-center">
-              {isWill && (
-                <img
-                  src={willImg}
-                  alt=""
-                  className="pointer-events-none absolute -left-16 -top-5 z-40 h-24 w-auto object-contain drop-shadow-[2px_4px_6px_rgba(0,0,0,0.3)]"
-                />
-              )}
-              <span
-                className={`font-display text-ink flex items-center gap-2 rounded-full border-2 border-transparent px-5 py-2.5 text-xs font-semibold shadow-[3px_3px_0px_rgba(0,0,0,0.15)] active:scale-95 ${color} ${hoverRot}`}
-              >
-                <Icon size={16} aria-hidden="true" />
-                {label}
-              </span>
-            </div>
-          );
+        {/* Linha 2: Social Media + Vamos Conversar */}
+        <div className="flex flex-wrap justify-center gap-3">
+          <Link to="/social-media" className="group">
+            <span className="font-display text-ink bg-accent-yellow active:scale-95 flex items-center gap-2 rounded-full border-2 border-transparent px-4 py-2.5 text-xs font-semibold shadow-[3px_3px_0px_rgba(0,0,0,0.15)] group-hover:-rotate-2">
+              <Share2 size={16} aria-hidden="true" />
+              Social Media
+            </span>
+          </Link>
+          <Link to="/contato" className="group">
+            <span className="font-display text-ink bg-accent-pink active:scale-95 flex items-center gap-2 rounded-full border-2 border-transparent px-4 py-2.5 text-xs font-semibold shadow-[3px_3px_0px_rgba(0,0,0,0.15)] group-hover:-rotate-2">
+              <Mail size={16} aria-hidden="true" />
+              Vamos Conversar
+            </span>
+          </Link>
+        </div>
 
-          return href.startsWith("/") ? (
-            <Link key={label} to={href} className="group my-1">
-              {inner}
-            </Link>
-          ) : (
-            <a key={label} href={href} className="group my-1">
-              {inner}
-            </a>
-          );
-        })}
+        {/* Linha 3: Conheça Minha Trajetória (Abaixo de todos com WILL.png) */}
+        <div className="mt-1 flex justify-center">
+          <Link to="/trajetoria" className="group relative inline-flex items-center">
+            <img
+              src={willImg}
+              alt="Will Smith apresentando a trajetória"
+              className="pointer-events-none absolute -left-16 -top-5 z-40 h-24 w-auto object-contain drop-shadow-[2px_4px_6px_rgba(0,0,0,0.3)] transition-transform duration-300 group-hover:scale-105"
+            />
+            <span className="font-display text-ink bg-accent-green active:scale-95 flex items-center gap-2 rounded-full border-2 border-transparent px-5 py-2.5 text-xs font-semibold shadow-[3px_3px_0px_rgba(0,0,0,0.15)] group-hover:rotate-2">
+              <FlaskConical size={16} aria-hidden="true" />
+              Conheça Minha Trajetória
+            </span>
+          </Link>
+        </div>
       </div>
 
       {/* Recado adesivo */}
