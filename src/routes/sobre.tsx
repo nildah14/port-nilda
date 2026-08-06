@@ -155,8 +155,8 @@ function Sobre() {
             </span>
           </Link>
 
-          {/* Loop Vertical de Tecnologias iniciando em Principais Competências e terminando em Aprendizado Rápido */}
-          <div className="mt-6 flex h-[800px] w-[240px] flex-col items-center justify-start overflow-hidden md:h-[1050px] md:w-[280px]">
+          {/* Loop Vertical de Tecnologias (Apenas no Desktop) */}
+          <div className="mt-6 hidden h-[1050px] w-[280px] flex-col items-center justify-start overflow-hidden md:flex">
             <span className="font-display text-ink-soft mb-3 text-xs font-bold uppercase tracking-wider">
               Tecnologias & Ferramentas
             </span>
@@ -259,6 +259,39 @@ function Sobre() {
               </li>
             ))}
           </ul>
+
+          {/* Loop Vertical de Tecnologias (Exibido apenas na última parte da página em móbile) */}
+          <div className="mt-12 flex flex-col items-center justify-center overflow-hidden md:hidden">
+            <span className="font-display text-ink-soft mb-3 text-xs font-bold uppercase tracking-wider">
+              Tecnologias & Ferramentas
+            </span>
+            <div className="relative flex h-[350px] w-full items-center justify-center gap-6 overflow-hidden">
+              <LogoLoop
+                logos={techLogosCol1}
+                speed={40}
+                direction="up"
+                logoHeight={44}
+                gap={24}
+                hoverSpeed={0}
+                scaleOnHover
+                fadeOut
+                fadeOutColor="#f7f5f0"
+                ariaLabel="Tecnologias e ferramentas - Coluna 1 móbile"
+              />
+              <LogoLoop
+                logos={techLogosCol2}
+                speed={35}
+                direction="down"
+                logoHeight={44}
+                gap={24}
+                hoverSpeed={0}
+                scaleOnHover
+                fadeOut
+                fadeOutColor="#f7f5f0"
+                ariaLabel="Tecnologias e ferramentas - Coluna 2 móbile"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </main>
