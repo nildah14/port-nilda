@@ -91,7 +91,7 @@ function Index() {
       {/* Retrato central */}
       <div className="relative z-20 my-1 md:my-0 md:-mt-8">
         <div className="sticker-effect relative">
-          <div className="clip-paper relative h-[260px] w-[195px] overflow-hidden sm:h-[320px] sm:w-[240px] md:h-[440px] md:w-[330px]">
+          <div className="clip-paper relative h-[310px] w-[235px] overflow-hidden sm:h-[350px] sm:w-[265px] md:h-[440px] md:w-[330px]">
             <img
               src={fotoPortfolio}
               alt="Retrato da designer"
