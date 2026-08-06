@@ -1,9 +1,12 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, Share2, Wrench, LayoutGrid, ImagePlus, MessageCircle, Video, ExternalLink } from "lucide-react";
-import dlFitnessImg from "@/assets/clientes/dl-fitness.jpg";
-import meryTavaresImg from "@/assets/clientes/mery-tavares.png";
-import ostramarImg from "@/assets/clientes/ostramar.jpg";
-import todahoraImg from "@/assets/clientes/todahora-atacarejo.png";
+import dlFitnessImg from "@/assets/clientes/dl-fitness.jpeg";
+import meryTavaresImg from "@/assets/clientes/merytavares.jpeg";
+import ostramarImg from "@/assets/clientes/ostramar.jpeg";
+import todahoraImg from "@/assets/clientes/atacadão toda hora.jpeg";
+import abtecImg from "@/assets/clientes/abtec.jpeg";
+import oeconomicoImg from "@/assets/clientes/oeconomico.jpeg";
+import atacarejoImg from "@/assets/clientes/atacarejo.jpeg";
 
 const clientes = [
   {
@@ -11,7 +14,7 @@ const clientes = [
     titulo: "Deniloi | Moda Fitness",
     handle: "@dl.fitness.oficial",
     nicho: "Moda & Estilo de Vida",
-    desc: "Criação de conteúdo visual, campanhas de moda fitness e posicionamento de marca no Instagram.",
+    desc: "Criação de conteúdo visual, artes institucionais e posicionamento de marca no Instagram.",
     imagem: dlFitnessImg,
     href: "https://www.instagram.com/dl.fitness.oficial/",
     color: "bg-accent-yellow",
@@ -22,7 +25,7 @@ const clientes = [
     titulo: "Méry Tavares | Espaço da Beleza",
     handle: "@merytavaress_",
     nicho: "Beleza & Cuidados Pessoais",
-    desc: "Estratégia de mídia social para espaço de beleza, divulgação de serviços e conteúdo de engajamento.",
+    desc: "Design de posts promocionais, carrosséis informativos e identidade visual para salão de beleza.",
     imagem: meryTavaresImg,
     href: "https://www.instagram.com/merytavaress_/",
     color: "bg-accent-blue",
@@ -33,7 +36,7 @@ const clientes = [
     titulo: "Ostramar | Frutos do Mar",
     handle: "@ostramaroficial",
     nicho: "Gastronomia & Alimentação",
-    desc: "Fotografia gastronômica, divulgação de produtos gourmets e campanhas de delivery de frutos do mar.",
+    desc: "Artes gastronômicas, divulgação de produtos gourmets e campanhas de delivery.",
     imagem: ostramarImg,
     href: "https://www.instagram.com/ostramaroficial/",
     color: "bg-accent-green",
@@ -41,14 +44,47 @@ const clientes = [
   },
   {
     id: 4,
-    titulo: "Toda Hora Atacarejo",
+    titulo: "Atacadão Toda Hora",
     handle: "@todahoraatacarejo",
-    nicho: "E-Commerce & Varejo",
-    desc: "Marketing promocional, divulgação de encartes de ofertas e vídeos diários para atração de clientes.",
+    nicho: "Atacado & Varejo",
+    desc: "Artes promocionais diárias, encartes de ofertas e vídeos para atração de clientes.",
     imagem: todahoraImg,
     href: "https://www.instagram.com/todahoraatacarejo/",
     color: "bg-accent-pink",
     rot: "rotate-1",
+  },
+  {
+    id: 5,
+    titulo: "ABTEC | Tecnologia & Ensino",
+    handle: "@abtec.oficial",
+    nicho: "Educação & Tecnologia",
+    desc: "Comunicação visual, peças publicitárias e peças gráficas para cursos e treinamentos.",
+    imagem: abtecImg,
+    href: null,
+    color: "bg-card/90",
+    rot: "-rotate-1",
+  },
+  {
+    id: 6,
+    titulo: "O Econômico Supermercados",
+    handle: "@oeconomico",
+    nicho: "Supermercados & Varejo",
+    desc: "Design de encartes de ofertas, banners promocionais e peças para redes sociais.",
+    imagem: oeconomicoImg,
+    href: null,
+    color: "bg-accent-yellow",
+    rot: "rotate-2",
+  },
+  {
+    id: 7,
+    titulo: "Atacarejo das Ofertas",
+    handle: "@atacarejo",
+    nicho: "Comércio & Atacarejo",
+    desc: "Identidade visual promocional e peças de engajamento do cliente.",
+    imagem: atacarejoImg,
+    href: null,
+    color: "bg-accent-blue",
+    rot: "-rotate-1",
   },
 ];
 
@@ -266,12 +302,12 @@ function SocialMedia() {
                   <p className="font-hand text-ink-soft text-xl">{c.nicho}</p>
                 </div>
 
-                {/* Print real do perfil do cliente */}
-                <div className="my-4 overflow-hidden rounded border border-black/10 bg-black/5 shadow-inner">
+                {/* Imagem da arte original do cliente */}
+                <div className="my-4 flex items-center justify-center overflow-hidden rounded border border-black/10 bg-paper/50 p-2 shadow-inner">
                   <img
                     src={c.imagem}
-                    alt={`Perfil e trabalhos de ${c.titulo}`}
-                    className="h-64 w-full object-cover object-top transition-transform duration-500 hover:scale-105"
+                    alt={`Arte e design para ${c.titulo}`}
+                    className="max-h-72 w-full object-contain rounded transition-transform duration-500 hover:scale-105"
                   />
                 </div>
 
@@ -280,15 +316,21 @@ function SocialMedia() {
                 </p>
 
                 <div className="flex justify-end">
-                  <a
-                    href={c.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-paper text-ink font-display flex items-center gap-1.5 rounded-full border border-black/10 px-4 py-1.5 text-xs font-bold shadow-xs transition-transform hover:scale-105 active:scale-95"
-                  >
-                    <span>Ver no Instagram</span>
-                    <ExternalLink size={14} />
-                  </a>
+                  {c.href ? (
+                    <a
+                      href={c.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-paper text-ink font-display flex items-center gap-1.5 rounded-full border border-black/10 px-4 py-1.5 text-xs font-bold shadow-xs transition-transform hover:scale-105 active:scale-95"
+                    >
+                      <span>Ver no Instagram</span>
+                      <ExternalLink size={14} />
+                    </a>
+                  ) : (
+                    <span className="bg-paper/80 text-ink-soft font-display rounded-full border border-black/10 px-3 py-1 text-xs font-semibold shadow-xs">
+                      Arte de Mídia Social
+                    </span>
+                  )}
                 </div>
               </div>
             ))}
