@@ -137,9 +137,8 @@ function Index() {
 
       {/* Layout Mobile (Responsivo em lista flexível sem sobreposição) */}
       <div className="relative z-30 flex w-full flex-col items-center gap-4 py-4 md:hidden">
-        {botoes.map(({ href, label, Icon, characterImg, color, hoverRot }) => {
+        {botoes.map(({ href, label, Icon, color, hoverRot }) => {
           const isWill = label === "Conheça Minha Trajetória";
-          const isSeta = label === "Social Media";
 
           const inner = (
             <div className="relative inline-flex items-center">
@@ -148,13 +147,6 @@ function Index() {
                   src={willImg}
                   alt=""
                   className="pointer-events-none absolute -left-16 -top-5 z-40 h-24 w-auto object-contain drop-shadow-[2px_4px_6px_rgba(0,0,0,0.3)]"
-                />
-              )}
-              {isSeta && (
-                <img
-                  src={setaImg}
-                  alt=""
-                  className="pointer-events-none absolute -left-12 -top-4 z-40 h-12 w-auto object-contain drop-shadow-[2px_3px_5px_rgba(0,0,0,0.2)]"
                 />
               )}
               <span
