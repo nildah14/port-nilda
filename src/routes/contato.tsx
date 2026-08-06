@@ -139,13 +139,13 @@ function Contato() {
             <span className="text-ink-soft ml-8 block rotate-1">CONVERSAR</span>
           </h1>
 
-          <p className="font-hand text-ink-soft mt-4 text-2xl md:text-3xl">
-            Aberta a oportunidades em Dados, Python e automação
+          <p className="font-hand text-ink-soft mt-4 text-xl md:text-2xl">
+            Aberta a oportunidades em TI | Dados | Desenvolvimento | Python | Automação
           </p>
 
           <div className="border-card-edge bg-card/70 mt-8 rounded-sm border p-6 shadow-[3px_3px_0px_rgba(0,0,0,0.08)] backdrop-blur-sm">
             <p className="text-ink-soft leading-relaxed">
-              Sou estudante de Ciência da Computação (5º semestre) com foco em Engenharia de Dados, Python e GCP. Se você procura alguém para construir pipelines de dados robustos, automatizar rotinas complexas, organizar informações de verdade — e, nas horas vagas, dar aquele toque estratégico como Social Media —, me manda uma mensagem! Adoro novos desafios e respondo rapidinho.
+              Sou estudante de Ciência da Computação (5º semestre), com conhecimentos em Python, GCP, SQL e automação. Tenho interesse em Engenharia de Dados, Desenvolvimento de Software, Cloud e outras áreas de TI que me permitam evoluir tecnicamente. Busco oportunidades para aplicar meus conhecimentos, aprender continuamente e contribuir com soluções de impacto.
             </p>
           </div>
 
