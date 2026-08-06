@@ -81,18 +81,17 @@ const botoes = [
 
 function Index() {
   return (
-    <main className="bg-paper text-ink relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden p-6 md:p-12">
-      <h1 className="font-display text-center text-[12vw] leading-[0.85] font-extrabold tracking-tighter opacity-90 mix-blend-multiply md:text-[10rem]">
+    <main className="bg-paper text-ink relative flex min-h-screen w-full flex-col items-center justify-between overflow-x-hidden p-4 sm:p-6 md:justify-center md:p-12">
+      {/* Título Principal */}
+      <h1 className="font-display text-center text-5xl font-extrabold tracking-tighter opacity-90 mix-blend-multiply sm:text-6xl md:text-[10rem] md:leading-[0.85] z-10 mt-2 md:mt-0">
         <span className="block origin-bottom-right -rotate-2 transform">OLÁ,</span>
-        <span className="text-ink-soft ml-12 block rotate-1">PESSOAL</span>
+        <span className="text-ink-soft ml-6 block rotate-1 md:ml-12">PESSOAL</span>
       </h1>
 
-
-
       {/* Retrato central */}
-      <div className="relative z-20 -mt-4 md:-mt-8">
+      <div className="relative z-20 my-4 md:my-0 md:-mt-8">
         <div className="sticker-effect relative">
-          <div className="clip-paper relative h-[320px] w-[240px] overflow-hidden md:h-[440px] md:w-[330px]">
+          <div className="clip-paper relative h-[260px] w-[195px] overflow-hidden sm:h-[320px] sm:w-[240px] md:h-[440px] md:w-[330px]">
             <img
               src={fotoPortfolio}
               alt="Retrato da designer"
@@ -101,39 +100,83 @@ function Index() {
             <div className="pointer-events-none absolute inset-0 shadow-[inset_0_0_20px_rgba(0,0,0,0.2)]" />
           </div>
         </div>
-
       </div>
 
-      {/* Botões flutuantes */}
-      {botoes.map(({ href, label, Icon, characterImg, imgStyle, color, pos, anim, hoverRot }) => {
-        const inner = (
-          <div className="relative inline-flex items-center">
-            {characterImg && (
-              <img
-                src={characterImg}
-                alt=""
-                className={imgStyle || "pointer-events-none absolute -left-16 -top-8 z-40 h-20 w-auto object-contain"}
-              />
-            )}
-            <span
-              className={`font-display text-ink flex items-center gap-2 rounded-full border-2 border-transparent px-6 py-3 text-sm font-semibold shadow-[4px_4px_0px_rgba(0,0,0,0.15)] transition-all duration-300 group-hover:scale-110 group-hover:shadow-[6px_6px_0px_rgba(0,0,0,0.2)] md:text-base ${color} ${hoverRot}`}
-            >
-              <Icon size={18} aria-hidden="true" />
-              {label}
-            </span>
-          </div>
-        );
-        const cls = `group absolute z-30 ${pos} ${anim}`;
-        return href.startsWith("/") ? (
-          <Link key={label} to={href} className={cls}>
-            {inner}
-          </Link>
-        ) : (
-          <a key={label} href={href} className={cls}>
-            {inner}
-          </a>
-        );
-      })}
+      {/* Layout Desktop (Flutuante com posições absolutas) */}
+      <div className="hidden md:block">
+        {botoes.map(({ href, label, Icon, characterImg, imgStyle, color, pos, anim, hoverRot }) => {
+          const inner = (
+            <div className="relative inline-flex items-center">
+              {characterImg && (
+                <img
+                  src={characterImg}
+                  alt=""
+                  className={imgStyle || "pointer-events-none absolute -left-16 -top-8 z-40 h-20 w-auto object-contain"}
+                />
+              )}
+              <span
+                className={`font-display text-ink flex items-center gap-2 rounded-full border-2 border-transparent px-6 py-3 text-sm font-semibold shadow-[4px_4px_0px_rgba(0,0,0,0.15)] transition-all duration-300 group-hover:scale-110 group-hover:shadow-[6px_6px_0px_rgba(0,0,0,0.2)] md:text-base ${color} ${hoverRot}`}
+              >
+                <Icon size={18} aria-hidden="true" />
+                {label}
+              </span>
+            </div>
+          );
+          const cls = `group absolute z-30 ${pos} ${anim}`;
+          return href.startsWith("/") ? (
+            <Link key={label} to={href} className={cls}>
+              {inner}
+            </Link>
+          ) : (
+            <a key={label} href={href} className={cls}>
+              {inner}
+            </a>
+          );
+        })}
+      </div>
+
+      {/* Layout Mobile (Responsivo em lista flexível sem sobreposição) */}
+      <div className="relative z-30 flex w-full flex-col items-center gap-4 py-4 md:hidden">
+        {botoes.map(({ href, label, Icon, characterImg, color, hoverRot }) => {
+          const isWill = label === "Conheça Minha Trajetória";
+          const isSeta = label === "Social Media";
+
+          const inner = (
+            <div className="relative inline-flex items-center">
+              {isWill && (
+                <img
+                  src={willImg}
+                  alt=""
+                  className="pointer-events-none absolute -left-16 -top-5 z-40 h-24 w-auto object-contain drop-shadow-[2px_4px_6px_rgba(0,0,0,0.3)]"
+                />
+              )}
+              {isSeta && (
+                <img
+                  src={setaImg}
+                  alt=""
+                  className="pointer-events-none absolute -left-12 -top-4 z-40 h-12 w-auto object-contain drop-shadow-[2px_3px_5px_rgba(0,0,0,0.2)]"
+                />
+              )}
+              <span
+                className={`font-display text-ink flex items-center gap-2 rounded-full border-2 border-transparent px-5 py-2.5 text-xs font-semibold shadow-[3px_3px_0px_rgba(0,0,0,0.15)] active:scale-95 ${color} ${hoverRot}`}
+              >
+                <Icon size={16} aria-hidden="true" />
+                {label}
+              </span>
+            </div>
+          );
+
+          return href.startsWith("/") ? (
+            <Link key={label} to={href} className="group my-1">
+              {inner}
+            </Link>
+          ) : (
+            <a key={label} href={href} className="group my-1">
+              {inner}
+            </a>
+          );
+        })}
+      </div>
 
       {/* Recado adesivo */}
       <div className="animate-float-2 absolute right-6 bottom-6 z-40 hidden rotate-3 md:right-12 md:bottom-12 md:block">
