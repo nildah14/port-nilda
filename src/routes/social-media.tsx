@@ -1,5 +1,56 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowLeft, Share2, Wrench, LayoutGrid, ImagePlus, MessageCircle, Video, Palette } from "lucide-react";
+import { ArrowLeft, Share2, Wrench, LayoutGrid, ImagePlus, MessageCircle, Video, ExternalLink } from "lucide-react";
+import dlFitnessImg from "@/assets/clientes/dl-fitness.jpg";
+import meryTavaresImg from "@/assets/clientes/mery-tavares.png";
+import ostramarImg from "@/assets/clientes/ostramar.jpg";
+import todahoraImg from "@/assets/clientes/todahora-atacarejo.png";
+
+const clientes = [
+  {
+    id: 1,
+    titulo: "Deniloi | Moda Fitness",
+    handle: "@dl.fitness.oficial",
+    nicho: "Moda & Estilo de Vida",
+    desc: "Criação de conteúdo visual, campanhas de moda fitness e posicionamento de marca no Instagram.",
+    imagem: dlFitnessImg,
+    href: "https://www.instagram.com/dl.fitness.oficial/",
+    color: "bg-accent-yellow",
+    rot: "-rotate-1",
+  },
+  {
+    id: 2,
+    titulo: "Méry Tavares | Espaço da Beleza",
+    handle: "@merytavaress_",
+    nicho: "Beleza & Cuidados Pessoais",
+    desc: "Estratégia de mídia social para espaço de beleza, divulgação de serviços e conteúdo de engajamento.",
+    imagem: meryTavaresImg,
+    href: "https://www.instagram.com/merytavaress_/",
+    color: "bg-accent-blue",
+    rot: "rotate-1",
+  },
+  {
+    id: 3,
+    titulo: "Ostramar | Frutos do Mar",
+    handle: "@ostramaroficial",
+    nicho: "Gastronomia & Alimentação",
+    desc: "Fotografia gastronômica, divulgação de produtos gourmets e campanhas de delivery de frutos do mar.",
+    imagem: ostramarImg,
+    href: "https://www.instagram.com/ostramaroficial/",
+    color: "bg-accent-green",
+    rot: "-rotate-2",
+  },
+  {
+    id: 4,
+    titulo: "Toda Hora Atacarejo",
+    handle: "@todahoraatacarejo",
+    nicho: "E-Commerce & Varejo",
+    desc: "Marketing promocional, divulgação de encartes de ofertas e vídeos diários para atração de clientes.",
+    imagem: todahoraImg,
+    href: "https://www.instagram.com/todahoraatacarejo/",
+    color: "bg-accent-pink",
+    rot: "rotate-1",
+  },
+];
 
 const socialMediaJsonLd = {
   "@context": "https://schema.org",
@@ -186,7 +237,7 @@ function SocialMedia() {
           </div>
         </div>
 
-        {/* Seção Portfólio de Clientes (Cards Reservados / Em Branco) */}
+        {/* Seção Portfólio de Clientes & Cases Reais */}
         <div className="mt-16">
           <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
             <h2 className="font-display flex items-center gap-3 text-3xl font-bold">
@@ -194,38 +245,50 @@ function SocialMedia() {
               Portfólio de Clientes & Cases
             </h2>
             <span className="font-hand text-ink-soft text-xl">
-              Espaço preparado para demonstração de projetos
+              Projetos e marcas atendidas em mídias sociais
             </span>
           </div>
 
-          <div className="mt-6 grid gap-6 sm:grid-cols-2 md:grid-cols-3">
-            {clientesPlaceholder.map((c) => (
+          <div className="mt-6 grid gap-6 sm:grid-cols-2">
+            {clientes.map((c) => (
               <div
                 key={c.id}
-                className={`${c.color} ${c.rot} border-card-edge relative flex flex-col justify-between rounded-sm border p-5 shadow-[4px_4px_0px_rgba(0,0,0,0.12)] transition-transform duration-300 hover:rotate-0 hover:scale-[1.02] min-h-[260px]`}
+                className={`${c.color} ${c.rot} border-card-edge relative flex flex-col justify-between rounded-sm border p-5 shadow-[4px_4px_0px_rgba(0,0,0,0.12)] transition-transform duration-300 hover:rotate-0 hover:scale-[1.02]`}
               >
                 <div>
                   <div className="flex items-center justify-between border-b border-black/10 pb-3">
                     <span className="font-display text-xs font-bold uppercase tracking-wider opacity-70">
                       Case #{c.id < 10 ? `0${c.id}` : c.id}
                     </span>
-                    <Palette size={16} className="opacity-50" />
+                    <span className="font-mono text-xs font-semibold opacity-80">{c.handle}</span>
                   </div>
-                  <h3 className="font-display mt-3 text-xl font-bold">{c.titulo}</h3>
-                  <p className="font-hand text-ink-soft text-lg">{c.nicho}</p>
+                  <h3 className="font-display mt-3 text-2xl font-bold">{c.titulo}</h3>
+                  <p className="font-hand text-ink-soft text-xl">{c.nicho}</p>
                 </div>
 
-                {/* Moldura de Placeholder em branco */}
-                <div className="bg-paper/80 border-2 border-dashed border-black/20 my-4 flex h-28 w-full items-center justify-center rounded-sm p-3 text-center">
-                  <span className="font-hand text-ink-soft text-lg opacity-60">
-                    [ Adicionar Arte / Case do Cliente ]
-                  </span>
+                {/* Print real do perfil do cliente */}
+                <div className="my-4 overflow-hidden rounded border border-black/10 bg-black/5 shadow-inner">
+                  <img
+                    src={c.imagem}
+                    alt={`Perfil e trabalhos de ${c.titulo}`}
+                    className="h-64 w-full object-cover object-top transition-transform duration-500 hover:scale-105"
+                  />
                 </div>
+
+                <p className="text-ink-soft mb-4 text-sm font-medium leading-relaxed">
+                  {c.desc}
+                </p>
 
                 <div className="flex justify-end">
-                  <span className="bg-paper text-ink font-display rounded-full border border-black/10 px-3 py-1 text-xs font-semibold shadow-xs">
-                    Reservado
-                  </span>
+                  <a
+                    href={c.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-paper text-ink font-display flex items-center gap-1.5 rounded-full border border-black/10 px-4 py-1.5 text-xs font-bold shadow-xs transition-transform hover:scale-105 active:scale-95"
+                  >
+                    <span>Ver no Instagram</span>
+                    <ExternalLink size={14} />
+                  </a>
                 </div>
               </div>
             ))}
