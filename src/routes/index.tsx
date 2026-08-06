@@ -81,15 +81,15 @@ const botoes = [
 
 function Index() {
   return (
-    <main className="bg-paper text-ink relative flex min-h-screen w-full flex-col items-center justify-between overflow-x-hidden p-4 sm:p-6 md:justify-center md:p-12">
+    <main className="bg-paper text-ink relative flex min-h-screen w-full flex-col items-center justify-between overflow-x-hidden p-3 sm:p-6 md:justify-center md:p-12">
       {/* Título Principal */}
-      <h1 className="font-display text-center text-5xl font-extrabold tracking-tighter opacity-90 mix-blend-multiply sm:text-6xl md:text-[10rem] md:leading-[0.85] z-10 mt-2 md:mt-0">
+      <h1 className="font-display text-center text-5xl font-extrabold tracking-tighter opacity-90 mix-blend-multiply sm:text-6xl md:text-[10rem] md:leading-[0.85] z-10 mt-1 md:mt-0">
         <span className="block origin-bottom-right -rotate-2 transform">OLÁ,</span>
         <span className="text-ink-soft ml-6 block rotate-1 md:ml-12">PESSOAL</span>
       </h1>
 
       {/* Retrato central */}
-      <div className="relative z-20 my-4 md:my-0 md:-mt-8">
+      <div className="relative z-20 my-1 md:my-0 md:-mt-8">
         <div className="sticker-effect relative">
           <div className="clip-paper relative h-[260px] w-[195px] overflow-hidden sm:h-[320px] sm:w-[240px] md:h-[440px] md:w-[330px]">
             <img
@@ -136,7 +136,7 @@ function Index() {
       </div>
 
       {/* Layout Mobile (Responsivo: 2 botões na linha 1, 2 botões na linha 2, Trajetória abaixo de todos) */}
-      <div className="relative z-30 flex w-full flex-col items-center gap-3 py-4 md:hidden">
+      <div className="relative z-30 flex w-full flex-col items-center gap-2 py-1 md:hidden">
         {/* Linha 1: Projetos Realizados + Sobre Mim */}
         <div className="flex flex-wrap justify-center gap-3">
           <Link to="/projetos" className="group">
