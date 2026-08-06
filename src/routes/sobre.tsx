@@ -1,6 +1,49 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, GraduationCap } from "lucide-react";
 import fotoPortfolio from "@/assets/foto.portfolio.jpeg";
+import LogoLoop, { LogoItem } from "@/components/ui/LogoLoop";
+import {
+  SiJavascript,
+  SiPython,
+  SiHtml5,
+  SiAnthropic,
+  SiFigma,
+  SiReact,
+  SiNextdotjs,
+  SiTypescript,
+  SiTailwindcss,
+  SiVercel,
+  SiGithub,
+  SiPostgresql,
+  SiGooglebigquery,
+  SiInstagram,
+  SiFacebook,
+  SiTiktok,
+} from "react-icons/si";
+import { FaJava, FaCss3Alt } from "react-icons/fa6";
+import { VscCode } from "react-icons/vsc";
+
+const techLogos: LogoItem[] = [
+  { node: <VscCode className="text-[#007ACC]" />, title: "VS Code", ariaLabel: "VS Code" },
+  { node: <FaJava className="text-[#007396]" />, title: "Java", ariaLabel: "Java" },
+  { node: <SiJavascript className="text-[#F7DF1E] bg-black rounded-xs p-0.5" />, title: "JavaScript", ariaLabel: "JavaScript" },
+  { node: <SiPython className="text-[#3776AB]" />, title: "Python", ariaLabel: "Python" },
+  { node: <SiHtml5 className="text-[#E34F26]" />, title: "HTML5", ariaLabel: "HTML5" },
+  { node: <FaCss3Alt className="text-[#1572B6]" />, title: "CSS3", ariaLabel: "CSS3" },
+  { node: <SiAnthropic className="text-[#D97706]" />, title: "Claude Code", ariaLabel: "Claude Code" },
+  { node: <SiFigma className="text-[#F24E1E]" />, title: "Figma", ariaLabel: "Figma" },
+  { node: <SiReact className="text-[#61DAFB]" />, title: "React", ariaLabel: "React" },
+  { node: <SiNextdotjs className="text-black" />, title: "Next.js", ariaLabel: "Next.js" },
+  { node: <SiTypescript className="text-[#3178C6]" />, title: "TypeScript", ariaLabel: "TypeScript" },
+  { node: <SiTailwindcss className="text-[#06B6D4]" />, title: "Tailwind CSS", ariaLabel: "Tailwind CSS" },
+  { node: <SiVercel className="text-black" />, title: "Vercel", ariaLabel: "Vercel" },
+  { node: <SiGithub className="text-black" />, title: "GitHub", ariaLabel: "GitHub" },
+  { node: <SiPostgresql className="text-[#4169E1]" />, title: "SQL", ariaLabel: "SQL" },
+  { node: <SiGooglebigquery className="text-[#669DF6]" />, title: "BigQuery", ariaLabel: "BigQuery" },
+  { node: <SiInstagram className="text-[#E4405F]" />, title: "Instagram", ariaLabel: "Instagram" },
+  { node: <SiFacebook className="text-[#1877F2]" />, title: "Facebook", ariaLabel: "Facebook" },
+  { node: <SiTiktok className="text-black" />, title: "TikTok", ariaLabel: "TikTok" },
+];
 
 const sobreJsonLd = {
   "@context": "https://schema.org",
@@ -11,7 +54,7 @@ const sobreJsonLd = {
     "jobTitle": "Engenheira de Dados & Desenvolvedora Python",
     "description": "Graduanda em Ciência da Computação (5º semestre) com sólida base acadêmica em lógica de programação, algoritmos e engenharia de dados. Experiência com Python, SQL, GCP (BigQuery, Airflow), automação e mídias sociais.",
     "educationalBackground": "Ciência da Computação (5º semestre) - Universidade Cruzeiro do Sul",
-    "knowsAbout": ["Python", "SQL", "BigQuery", "Apache Airflow", "GCP", "GitHub", "Vercel"]
+    "knowsAbout": ["Python", "SQL", "BigQuery", "Apache Airflow", "GCP", "GitHub", "Vercel", "React", "TypeScript"]
   }
 };
 
@@ -89,10 +132,10 @@ function Sobre() {
   return (
     <main className="bg-paper text-ink min-h-screen w-full overflow-x-hidden px-6 py-10 md:px-12 md:py-16">
       <div className="mx-auto flex max-w-6xl flex-col gap-10 md:flex-row md:gap-16">
-        {/* Foto à esquerda */}
-        <div className="flex shrink-0 flex-col items-center gap-8 md:sticky md:top-16 md:h-fit md:items-start">
+        {/* Foto e Loop de Tecnologias à esquerda */}
+        <div className="flex shrink-0 flex-col items-center gap-6 md:sticky md:top-12 md:h-fit md:items-start">
           <div className="sticker-effect relative">
-            <div className="clip-paper relative h-[320px] w-[240px] overflow-hidden md:h-[420px] md:w-[310px]">
+            <div className="clip-paper relative h-[320px] w-[240px] overflow-hidden md:h-[380px] md:w-[280px]">
               <img
                 src={fotoPortfolio}
                 alt="Retrato de Ivanilda Rodrigues Braga"
@@ -108,6 +151,26 @@ function Sobre() {
               Voltar ao Início
             </span>
           </Link>
+
+          {/* Loop Vertical de Tecnologias (React Bits LogoLoop) */}
+          <div className="border-card-edge bg-card/80 mt-2 flex h-[240px] w-[240px] flex-col items-center justify-center overflow-hidden rounded-sm border p-4 shadow-[3px_3px_0px_rgba(0,0,0,0.08)] backdrop-blur-sm md:w-[280px]">
+            <span className="font-display text-ink-soft mb-3 text-xs font-bold uppercase tracking-wider">
+              Tecnologias & Ferramentas
+            </span>
+            <div className="relative h-[170px] w-full overflow-hidden flex items-center justify-center">
+              <LogoLoop
+                logos={techLogos}
+                speed={45}
+                direction="up"
+                logoHeight={34}
+                gap={24}
+                hoverSpeed={0}
+                scaleOnHover
+                fadeOut
+                ariaLabel="Tecnologias e ferramentas de Ivanilda Braga"
+              />
+            </div>
+          </div>
         </div>
 
         {/* Textos à direita */}
