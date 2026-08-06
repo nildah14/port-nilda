@@ -60,7 +60,7 @@ const clientes = [
     desc: "Comunicação visual, peças publicitárias e artes para cursos e treinamentos.",
     imagem: abtecImg,
     href: null,
-    color: "bg-card/90",
+    color: "bg-accent-green",
     rot: "-rotate-1",
   },
   {
