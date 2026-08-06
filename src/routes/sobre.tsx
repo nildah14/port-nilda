@@ -136,7 +136,7 @@ function Sobre() {
     <main className="bg-paper text-ink min-h-screen w-full overflow-x-hidden px-6 py-10 md:px-12 md:py-16">
       <div className="mx-auto flex max-w-6xl flex-col gap-10 md:flex-row md:items-stretch md:gap-16">
         {/* Foto e Loop de Tecnologias à esquerda */}
-        <div className="flex shrink-0 flex-col items-center gap-6 md:w-[280px] md:items-start md:self-stretch">
+        <div className="flex shrink-0 flex-col items-center gap-6 md:sticky md:top-12 md:w-[280px] md:items-start">
           <div className="sticker-effect relative">
             <div className="clip-paper relative h-[320px] w-[240px] overflow-hidden md:h-[380px] md:w-[280px]">
               <img
@@ -155,12 +155,12 @@ function Sobre() {
             </span>
           </Link>
 
-          {/* Loop Vertical de Tecnologias estendendo até o final do card de diferenciais */}
-          <div className="mt-4 flex min-h-[450px] w-[240px] flex-1 flex-col items-center justify-start overflow-hidden md:w-[280px]">
-            <span className="font-display text-ink-soft mb-4 text-xs font-bold uppercase tracking-wider">
+          {/* Loop Vertical de Tecnologias alinhado exatamente ao final do card de diferenciais */}
+          <div className="mt-2 flex h-[480px] w-[240px] flex-col items-center justify-start overflow-hidden md:h-[570px] md:w-[280px]">
+            <span className="font-display text-ink-soft mb-3 text-xs font-bold uppercase tracking-wider">
               Tecnologias & Ferramentas
             </span>
-            <div className="relative flex h-full min-h-[400px] w-full flex-1 items-center justify-center gap-8 overflow-hidden">
+            <div className="relative flex h-full w-full items-center justify-center gap-8 overflow-hidden">
               <LogoLoop
                 logos={techLogosCol1}
                 speed={45}
