@@ -81,9 +81,9 @@ const botoes = [
 
 function Index() {
   return (
-    <main className="bg-paper text-ink relative flex min-h-screen w-full flex-col items-center justify-between overflow-x-hidden p-3 sm:p-6 md:justify-center md:p-12">
+    <main className="bg-paper text-ink relative flex min-h-screen w-full flex-col items-center justify-center gap-3 overflow-x-hidden p-4 sm:p-6 md:gap-0 md:p-12">
       {/* Título Principal */}
-      <h1 className="font-display text-center text-5xl font-extrabold tracking-tighter opacity-90 mix-blend-multiply sm:text-6xl md:text-[10rem] md:leading-[0.85] z-10 mt-1 md:mt-0">
+      <h1 className="font-display text-center text-5xl font-extrabold tracking-tighter opacity-90 mix-blend-multiply sm:text-6xl md:text-[10rem] md:leading-[0.85] z-10">
         <span className="block origin-bottom-right -rotate-2 transform">OLÁ,</span>
         <span className="text-ink-soft ml-6 block rotate-1 md:ml-12">PESSOAL</span>
       </h1>
@@ -136,7 +136,7 @@ function Index() {
       </div>
 
       {/* Layout Mobile (Responsivo: 2 botões na linha 1, 2 botões na linha 2, Trajetória abaixo de todos) */}
-      <div className="relative z-30 flex w-full flex-col items-center gap-2 py-1 md:hidden">
+      <div className="relative z-30 flex w-full flex-col items-center gap-2.5 pt-1 md:hidden">
         {/* Linha 1: Projetos Realizados + Sobre Mim */}
         <div className="flex flex-wrap justify-center gap-3">
           <Link to="/projetos" className="group">
