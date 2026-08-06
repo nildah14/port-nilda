@@ -128,6 +128,9 @@ const diferenciais = [
   "Aprendizado rápido, raciocínio lógico e resiliência",
 ];
 
+const techLogosCol1 = techLogos.slice(0, 10);
+const techLogosCol2 = techLogos.slice(10);
+
 function Sobre() {
   return (
     <main className="bg-paper text-ink min-h-screen w-full overflow-x-hidden px-6 py-10 md:px-12 md:py-16">
@@ -152,22 +155,35 @@ function Sobre() {
             </span>
           </Link>
 
-          {/* Loop Vertical de Tecnologias (React Bits LogoLoop) */}
-          <div className="border-card-edge bg-card/80 mt-2 flex h-[240px] w-[240px] flex-col items-center justify-center overflow-hidden rounded-sm border p-4 shadow-[3px_3px_0px_rgba(0,0,0,0.08)] backdrop-blur-sm md:w-[280px]">
-            <span className="font-display text-ink-soft mb-3 text-xs font-bold uppercase tracking-wider">
+          {/* Loop Vertical de Tecnologias (2 colunas, fundo transparente da página, ícones maiores) */}
+          <div className="mt-4 flex w-[240px] flex-col items-center justify-center overflow-hidden md:w-[280px]">
+            <span className="font-display text-ink-soft mb-4 text-xs font-bold uppercase tracking-wider">
               Tecnologias & Ferramentas
             </span>
-            <div className="relative h-[170px] w-full overflow-hidden flex items-center justify-center">
+            <div className="relative flex h-[280px] w-full items-center justify-center gap-8 overflow-hidden">
               <LogoLoop
-                logos={techLogos}
+                logos={techLogosCol1}
                 speed={45}
                 direction="up"
-                logoHeight={34}
-                gap={24}
+                logoHeight={48}
+                gap={28}
                 hoverSpeed={0}
                 scaleOnHover
                 fadeOut
-                ariaLabel="Tecnologias e ferramentas de Ivanilda Braga"
+                fadeOutColor="#f7f5f0"
+                ariaLabel="Tecnologias e ferramentas - Coluna 1"
+              />
+              <LogoLoop
+                logos={techLogosCol2}
+                speed={38}
+                direction="down"
+                logoHeight={48}
+                gap={28}
+                hoverSpeed={0}
+                scaleOnHover
+                fadeOut
+                fadeOutColor="#f7f5f0"
+                ariaLabel="Tecnologias e ferramentas - Coluna 2"
               />
             </div>
           </div>
