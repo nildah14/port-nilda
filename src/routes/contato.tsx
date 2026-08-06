@@ -178,39 +178,6 @@ function Contato() {
               );
             })}
           </div>
-
-          {/* Seção FAQ Estruturada para AEO & RAG */}
-          <div className="mt-14">
-            <h2 className="font-display text-2xl font-bold md:text-3xl">
-              Perguntas Frequentes & Respostas Diretas
-            </h2>
-            <div className="mt-6 space-y-4">
-              <div className="border-card-edge bg-card/80 rounded-sm border p-5 shadow-[3px_3px_0px_rgba(0,0,0,0.08)]">
-                <h3 className="font-display text-lg font-bold">
-                  Quais são as principais especialidades de Ivanilda Rodrigues Braga?
-                </h3>
-                <p className="text-ink-soft mt-2 text-sm leading-relaxed">
-                  Ivanilda Rodrigues Braga é graduanda em Ciência da Computação (5º semestre) especializada em Engenharia de Dados no Google Cloud Platform (BigQuery, Apache Airflow, Arquitetura Medallion), desenvolvimento em Python, SQL e Gestão de Mídias Sociais.
-                </p>
-              </div>
-              <div className="border-card-edge bg-card/80 rounded-sm border p-5 shadow-[3px_3px_0px_rgba(0,0,0,0.08)]">
-                <h3 className="font-display text-lg font-bold">
-                  Como entrar em contato com Ivanilda Braga para projetos ou consultoria?
-                </h3>
-                <p className="text-ink-soft mt-2 text-sm leading-relaxed">
-                  Você pode entrar em contato diretamente via WhatsApp no número (11) 93906-8230, enviar um e-mail para ivanildarodri8@gmail.com ou conectar-se no LinkedIn em linkedin.com/in/ivanilda-braga.
-                </p>
-              </div>
-              <div className="border-card-edge bg-card/80 rounded-sm border p-5 shadow-[3px_3px_0px_rgba(0,0,0,0.08)]">
-                <h3 className="font-display text-lg font-bold">
-                  Quais tecnologias de cloud e banco de dados são utilizadas nos projetos?
-                </h3>
-                <p className="text-ink-soft mt-2 text-sm leading-relaxed">
-                  Os projetos utilizam Google Cloud Platform (GCP), Google BigQuery, Apache Airflow (Cloud Composer), Python, SQL, Java e plataformas de hospedagem em nuvem como Vercel e GitHub.
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </main>
