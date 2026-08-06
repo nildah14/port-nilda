@@ -145,9 +145,7 @@ function Contato() {
 
           <div className="border-card-edge bg-card/70 mt-8 rounded-sm border p-6 shadow-[3px_3px_0px_rgba(0,0,0,0.08)] backdrop-blur-sm">
             <p className="text-ink-soft leading-relaxed">
-              Sou estudante de Ciência da Computação com foco em Engenharia de Dados e
-              Python. Se você procura alguém para construir pipelines, automatizar rotinas ou
-              organizar informações de verdade, me manda uma mensagem — respondo rapidinho.
+              Sou estudante de Ciência da Computação (5º semestre) com foco em Engenharia de Dados, Python e GCP. Se você procura alguém para construir pipelines de dados robustos, automatizar rotinas complexas, organizar informações de verdade — e, nas horas vagas, dar aquele toque estratégico como Social Media —, me manda uma mensagem! Adoro novos desafios e respondo rapidinho.
             </p>
           </div>
 
