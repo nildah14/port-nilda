@@ -2,7 +2,7 @@
 
 Landing Page e Portfólio profissional desenvolvido em React 19, Vite, TypeScript, TanStack Router e Tailwind CSS.
 
-## 🚀 Desenvolvimento e Edições Manuais
+## Desenvolvimento e Edições Manuais
 
 Este projeto é mantido via edições manuais no código-fonte local, sem dependência de editores externos.
 
@@ -33,7 +33,7 @@ Para rodar e editar o projeto localmente, certifique-se de ter instalado:
 
 ---
 
-## 🛠️ Guia de Edições Manuais no Código
+## Guia de Edições Manuais no Código
 
 - **Páginas e Roteamento (`src/routes/`):**
   - O projeto utiliza o **TanStack Router / Start** para roteamento baseado em arquivos.
@@ -55,7 +55,7 @@ Para rodar e editar o projeto localmente, certifique-se de ter instalado:
 
 ---
 
-## 📦 Processo de Build e Produção
+## Processo de Build e Produção
 
 Após realizar suas edições manuais, siga os passos abaixo para gerar e testar a build final:
 
