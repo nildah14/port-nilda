@@ -234,13 +234,18 @@ function Sobre() {
               Resumo profissional
             </h2>
             <p className="text-ink-soft mt-3 leading-relaxed">
-              Graduanda em Ciência da Computação (6º semestre) com sólida base acadêmica em lógica
-              de programação, estruturas de dados, algoritmos, redes e sistemas operacionais. Tenho
-              competências práticas em Python, SQL e manipulação de bases de dados, aliando
-              raciocínio analítico a uma trajetória com forte vivência em resolução de problemas,
-              tratamento de fluxos de informações e gestão de processos dinâmicos. Estou motivada a
-              atuar na área de Dados, aplicando conhecimentos em extração, tratamento e estruturação
-              de informações para apoiar soluções tecnológicas eficientes.
+              Estudante de Ciência da Computação, Atualmente no 6° semestre. com conhecimentos em
+              lógica de programação, estruturas de dados, algoritmos, Python, SQL, bancos de dados e
+              Pacote Office. Tenho interesse em desenvolvimento de soluções tecnológicas, análise de
+              dados e automação de processos, buscando aplicar meus conhecimentos acadêmicos e
+              práticos na resolução de problemas e na melhoria de processos.
+            </p>
+            <p className="text-ink-soft mt-3 leading-relaxed">
+              Minha trajetória profissional também me proporcionou experiência com gestão, CRM,
+              organização de fluxos de informação e acompanhamento de processos, desenvolvendo uma
+              visão analítica e integrada entre tecnologia e negócios. Tenho facilidade para
+              aprender novas ferramentas, curiosidade para explorar diferentes soluções e interesse
+              em contribuir com projetos que conectem tecnologia, inovação e eficiência.
             </p>
           </div>
 
