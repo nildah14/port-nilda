@@ -7,39 +7,40 @@ const contatoJsonLd = {
   "@graph": [
     {
       "@type": "ContactPage",
-      "name": "Contato — Ivanilda Rodrigues Braga",
-      "description": "Entre em contato com Ivanilda Rodrigues Braga via WhatsApp, E-mail ou LinkedIn para projetos de Engenharia de Dados, Python e Mídias Sociais."
+      name: "Contato — Ivanilda Braga Loiola",
+      description:
+        "Entre em contato com Ivanilda Braga Loiola via WhatsApp, E-mail ou LinkedIn para projetos de Engenharia de Dados, Python e Mídias Sociais.",
     },
     {
       "@type": "FAQPage",
-      "mainEntity": [
+      mainEntity: [
         {
           "@type": "Question",
-          "name": "Quais são as principais especialidades de Ivanilda Rodrigues Braga?",
-          "acceptedAnswer": {
+          name: "Quais são as principais especialidades de Ivanilda Braga Loiola?",
+          acceptedAnswer: {
             "@type": "Answer",
-            "text": "Ivanilda Rodrigues Braga é graduanda em Ciência da Computação (6º semestre) especializada em Engenharia de Dados no Google Cloud Platform (BigQuery, Apache Airflow, Arquitetura Medallion), desenvolvimento em Python, SQL e Gestão de Mídias Sociais."
-          }
+            text: "Ivanilda Braga Loiola é graduanda em Ciência da Computação (6º semestre) especializada em Engenharia de Dados no Google Cloud Platform (BigQuery, Apache Airflow, Arquitetura Medallion), desenvolvimento em Python, SQL e Gestão de Mídias Sociais.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Como entrar em contato com Ivanilda Braga para projetos ou consultoria?",
-          "acceptedAnswer": {
+          name: "Como entrar em contato com Ivanilda Braga para projetos ou consultoria?",
+          acceptedAnswer: {
             "@type": "Answer",
-            "text": "Você pode entrar em contato diretamente via WhatsApp no número (11) 93906-8230, enviar um e-mail para ivanildarodri8@gmail.com ou conectar-se no LinkedIn linkedin.com/in/ivanilda-braga."
-          }
+            text: "Você pode entrar em contato diretamente via WhatsApp no número (11) 93906-8230, enviar um e-mail para ivanildarodri8@gmail.com ou conectar-se no LinkedIn linkedin.com/in/ivanilda-braga.",
+          },
         },
         {
           "@type": "Question",
-          "name": "Quais tecnologias de cloud e banco de dados são utilizadas nos projetos?",
-          "acceptedAnswer": {
+          name: "Quais tecnologias de cloud e banco de dados são utilizadas nos projetos?",
+          acceptedAnswer: {
             "@type": "Answer",
-            "text": "Os projetos utilizam Google Cloud Platform (GCP), Google BigQuery, Apache Airflow (Cloud Composer), Python, SQL, Java e plataformas de hospedagem em nuvem como Vercel e GitHub."
-          }
-        }
-      ]
-    }
-  ]
+            text: "Os projetos utilizam Google Cloud Platform (GCP), Google BigQuery, Apache Airflow (Cloud Composer), Python, SQL, Java e plataformas de hospedagem em nuvem como Vercel e GitHub.",
+          },
+        },
+      ],
+    },
+  ],
 };
 
 export const Route = createFileRoute("/contato")({
@@ -49,7 +50,7 @@ export const Route = createFileRoute("/contato")({
       {
         name: "description",
         content:
-          "Fale com Ivanilda Rodrigues Braga: WhatsApp, e-mail e LinkedIn para oportunidades em Engenharia de Dados, Python e automação.",
+          "Fale com Ivanilda Braga Loiola: WhatsApp, e-mail e LinkedIn para oportunidades em Engenharia de Dados, Python e automação.",
       },
       { property: "og:title", content: "Vamos Conversar — Ivanilda Braga" },
       {
@@ -59,9 +60,7 @@ export const Route = createFileRoute("/contato")({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [
-      { rel: "canonical", href: "https://ivanildabraga.dev/contato" }
-    ],
+    links: [{ rel: "canonical", href: "https://ivanildabraga.dev/contato" }],
     scripts: [
       {
         type: "application/ld+json",
@@ -117,7 +116,7 @@ function Contato() {
             <div className="clip-paper relative h-[320px] w-[240px] overflow-hidden md:h-[420px] md:w-[310px]">
               <img
                 src={fotoPortfolio}
-                alt="Retrato de Ivanilda Rodrigues Braga"
+                alt="Retrato de Ivanilda Braga Loiola"
                 className="h-full w-full object-cover"
               />
               <div className="pointer-events-none absolute inset-0 shadow-[inset_0_0_20px_rgba(0,0,0,0.2)]" />
@@ -145,7 +144,11 @@ function Contato() {
 
           <div className="border-card-edge bg-card/70 mt-8 rounded-sm border p-6 shadow-[3px_3px_0px_rgba(0,0,0,0.08)] backdrop-blur-sm">
             <p className="text-ink-soft leading-relaxed">
-              Sou estudante de Ciência da Computação (6º semestre), com conhecimentos em Python, GCP, SQL e automação. Tenho interesse em Engenharia de Dados, Desenvolvimento de Software, Cloud e outras áreas de TI que me permitam evoluir tecnicamente. Busco oportunidades para aplicar meus conhecimentos, aprender continuamente e contribuir com soluções de impacto.
+              Sou estudante de Ciência da Computação (6º semestre), com conhecimentos em Python,
+              GCP, SQL e automação. Tenho interesse em Engenharia de Dados, Desenvolvimento de
+              Software, Cloud e outras áreas de TI que me permitam evoluir tecnicamente. Busco
+              oportunidades para aplicar meus conhecimentos, aprender continuamente e contribuir com
+              soluções de impacto.
             </p>
           </div>
 

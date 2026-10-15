@@ -4,7 +4,6 @@ import fotoPortfolio from "@/assets/foto.portfolio.jpeg";
 import willImg from "@/assets/WILL.png";
 import setaImg from "@/assets/seta.png";
 
-
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -51,7 +50,8 @@ const botoes = [
     label: "Social Media",
     Icon: Share2,
     characterImg: setaImg,
-    imgStyle: "pointer-events-none absolute -left-24 top-1 z-40 h-16 w-auto md:-left-36 md:top-2 md:h-24 object-contain drop-shadow-[2px_4px_6px_rgba(0,0,0,0.25)] transition-transform duration-300 group-hover:scale-110",
+    imgStyle:
+      "pointer-events-none absolute -left-24 top-1 z-40 h-16 w-auto md:-left-36 md:top-2 md:h-24 object-contain drop-shadow-[2px_4px_6px_rgba(0,0,0,0.25)] transition-transform duration-300 group-hover:scale-110",
     color: "bg-accent-yellow",
     pos: "top-[48%] right-[4%] md:right-[12%]",
     anim: "animate-float-3",
@@ -62,7 +62,8 @@ const botoes = [
     label: "Conheça Minha Trajetória",
     Icon: FlaskConical,
     characterImg: willImg,
-    imgStyle: "pointer-events-none absolute -left-20 -top-6 z-40 h-36 w-auto md:-left-28 md:-top-8 md:h-48 object-contain drop-shadow-[3px_6px_10px_rgba(0,0,0,0.35)] transition-transform duration-300 group-hover:scale-105",
+    imgStyle:
+      "pointer-events-none absolute -left-20 -top-6 z-40 h-36 w-auto md:-left-28 md:-top-8 md:h-48 object-contain drop-shadow-[3px_6px_10px_rgba(0,0,0,0.35)] transition-transform duration-300 group-hover:scale-105",
     color: "bg-accent-green",
     pos: "bottom-[28%] left-[6%] md:left-[16%]",
     anim: "animate-float-3",
@@ -111,7 +112,10 @@ function Index() {
                 <img
                   src={characterImg}
                   alt=""
-                  className={imgStyle || "pointer-events-none absolute -left-16 -top-8 z-40 h-20 w-auto object-contain"}
+                  className={
+                    imgStyle ||
+                    "pointer-events-none absolute -left-16 -top-8 z-40 h-20 w-auto object-contain"
+                  }
                 />
               )}
               <span

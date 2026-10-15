@@ -4,34 +4,38 @@ import { ArrowLeft, Database, Cpu, Workflow, FileSpreadsheet, Code2, Server } fr
 const projetosJsonLd = {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  "name": "Projetos Realizados de Engenharia de Dados & Automação",
-  "description": "Portfólio de projetos técnicos desenvolvidos por Ivanilda Rodrigues Braga no Google Cloud Platform, Apache Airflow, Python e automação de processos.",
-  "itemListElement": [
+  name: "Projetos Realizados de Engenharia de Dados & Automação",
+  description:
+    "Portfólio de projetos técnicos desenvolvidos por Ivanilda Braga Loiola no Google Cloud Platform, Apache Airflow, Python e automação de processos.",
+  itemListElement: [
     {
       "@type": "ListItem",
-      "position": 1,
-      "name": "Pipelines de Dados GCP & Arquitetura Medallion",
-      "description": "Pipelines de dados Batch e Streaming no GCP utilizando Python, SQL e BigQuery com camadas Bronze, Silver e Gold."
+      position: 1,
+      name: "Pipelines de Dados GCP & Arquitetura Medallion",
+      description:
+        "Pipelines de dados Batch e Streaming no GCP utilizando Python, SQL e BigQuery com camadas Bronze, Silver e Gold.",
     },
     {
       "@type": "ListItem",
-      "position": 2,
-      "name": "Orquestração ETL/ELT com Apache Airflow",
-      "description": "Gerenciamento de DAGs no Apache Airflow (Cloud Composer) para orquestração de fluxos ETL/ELT."
+      position: 2,
+      name: "Orquestração ETL/ELT com Apache Airflow",
+      description:
+        "Gerenciamento de DAGs no Apache Airflow (Cloud Composer) para orquestração de fluxos ETL/ELT.",
     },
     {
       "@type": "ListItem",
-      "position": 3,
-      "name": "Automações em Python & IA Generativa",
-      "description": "Automações em Python, desenvolvimento assistido por Claude Code e versionamento CI/CD."
+      position: 3,
+      name: "Automações em Python & IA Generativa",
+      description:
+        "Automações em Python, desenvolvimento assistido por Claude Code e versionamento CI/CD.",
     },
     {
       "@type": "ListItem",
-      "position": 4,
-      "name": "Gestão de Ecossistemas Digitais & CRM",
-      "description": "Automação GoHighLevel (GHL), WordPress, WhatsApp API e análise de KPIs."
-    }
-  ]
+      position: 4,
+      name: "Gestão de Ecossistemas Digitais & CRM",
+      description: "Automação GoHighLevel (GHL), WordPress, WhatsApp API e análise de KPIs.",
+    },
+  ],
 };
 
 export const Route = createFileRoute("/projetos")({
@@ -52,9 +56,7 @@ export const Route = createFileRoute("/projetos")({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [
-      { rel: "canonical", href: "https://ivanildabraga.dev/projetos" }
-    ],
+    links: [{ rel: "canonical", href: "https://ivanildabraga.dev/projetos" }],
     scripts: [
       {
         type: "application/ld+json",
@@ -180,7 +182,9 @@ function Projetos() {
             </h2>
           </div>
           <p className="text-ink-soft mt-2 text-base leading-relaxed">
-            Especializada no desenvolvimento de pipelines de dados eficientes, automação de processos complexos com Python e IA, além da integração contínua de ecossistemas digitais e sistemas de gestão.
+            Especializada no desenvolvimento de pipelines de dados eficientes, automação de
+            processos complexos com Python e IA, além da integração contínua de ecossistemas
+            digitais e sistemas de gestão.
           </p>
         </div>
 
@@ -199,12 +203,8 @@ function Projetos() {
                       <IconComp size={24} aria-hidden="true" />
                     </div>
                     <div>
-                      <h3 className="font-display text-2xl font-bold md:text-3xl">
-                        {p.titulo}
-                      </h3>
-                      <p className="font-hand text-ink-soft text-xl font-semibold">
-                        {p.subtitulo}
-                      </p>
+                      <h3 className="font-display text-2xl font-bold md:text-3xl">{p.titulo}</h3>
+                      <p className="font-hand text-ink-soft text-xl font-semibold">{p.subtitulo}</p>
                     </div>
                   </div>
                 </div>
@@ -220,7 +220,10 @@ function Projetos() {
                   </h4>
                   <ul className="space-y-1">
                     {p.destaques.map((item, idx) => (
-                      <li key={idx} className="text-ink flex items-start gap-2 text-sm md:text-base">
+                      <li
+                        key={idx}
+                        className="text-ink flex items-start gap-2 text-sm md:text-base"
+                      >
                         <span className="text-ink font-bold">•</span>
                         <span>{item}</span>
                       </li>

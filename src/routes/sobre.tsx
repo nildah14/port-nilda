@@ -26,20 +26,40 @@ import { VscCode } from "react-icons/vsc";
 const techLogos: LogoItem[] = [
   { node: <VscCode className="text-[#007ACC]" />, title: "VS Code", ariaLabel: "VS Code" },
   { node: <FaJava className="text-[#007396]" />, title: "Java", ariaLabel: "Java" },
-  { node: <SiJavascript className="text-[#F7DF1E]" />, title: "JavaScript", ariaLabel: "JavaScript" },
+  {
+    node: <SiJavascript className="text-[#F7DF1E]" />,
+    title: "JavaScript",
+    ariaLabel: "JavaScript",
+  },
   { node: <SiPython className="text-[#3776AB]" />, title: "Python", ariaLabel: "Python" },
   { node: <SiHtml5 className="text-[#E34F26]" />, title: "HTML5", ariaLabel: "HTML5" },
   { node: <FaCss3Alt className="text-[#1572B6]" />, title: "CSS3", ariaLabel: "CSS3" },
-  { node: <SiAnthropic className="text-[#D97706]" />, title: "Claude Code", ariaLabel: "Claude Code" },
+  {
+    node: <SiAnthropic className="text-[#D97706]" />,
+    title: "Claude Code",
+    ariaLabel: "Claude Code",
+  },
   { node: <SiFigma className="text-[#F24E1E]" />, title: "Figma", ariaLabel: "Figma" },
   { node: <SiReact className="text-[#61DAFB]" />, title: "React", ariaLabel: "React" },
   { node: <SiNextdotjs className="text-black" />, title: "Next.js", ariaLabel: "Next.js" },
-  { node: <SiTypescript className="text-[#3178C6]" />, title: "TypeScript", ariaLabel: "TypeScript" },
-  { node: <SiTailwindcss className="text-[#06B6D4]" />, title: "Tailwind CSS", ariaLabel: "Tailwind CSS" },
+  {
+    node: <SiTypescript className="text-[#3178C6]" />,
+    title: "TypeScript",
+    ariaLabel: "TypeScript",
+  },
+  {
+    node: <SiTailwindcss className="text-[#06B6D4]" />,
+    title: "Tailwind CSS",
+    ariaLabel: "Tailwind CSS",
+  },
   { node: <SiVercel className="text-black" />, title: "Vercel", ariaLabel: "Vercel" },
   { node: <SiGithub className="text-black" />, title: "GitHub", ariaLabel: "GitHub" },
   { node: <SiPostgresql className="text-[#4169E1]" />, title: "SQL", ariaLabel: "SQL" },
-  { node: <SiGooglebigquery className="text-[#669DF6]" />, title: "BigQuery", ariaLabel: "BigQuery" },
+  {
+    node: <SiGooglebigquery className="text-[#669DF6]" />,
+    title: "BigQuery",
+    ariaLabel: "BigQuery",
+  },
   { node: <SiInstagram className="text-[#E4405F]" />, title: "Instagram", ariaLabel: "Instagram" },
   { node: <SiFacebook className="text-[#1877F2]" />, title: "Facebook", ariaLabel: "Facebook" },
   { node: <SiTiktok className="text-black" />, title: "TikTok", ariaLabel: "TikTok" },
@@ -48,14 +68,25 @@ const techLogos: LogoItem[] = [
 const sobreJsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfilePage",
-  "mainEntity": {
+  mainEntity: {
     "@type": "Person",
-    "name": "Ivanilda Rodrigues Braga",
-    "jobTitle": "Engenheira de Dados & Desenvolvedora Python",
-    "description": "Graduanda em Ciência da Computação (6º semestre) com sólida base acadêmica em lógica de programação, algoritmos e engenharia de dados. Experiência com Python, SQL, GCP (BigQuery, Airflow), automação e mídias sociais.",
-    "educationalBackground": "Ciência da Computação (6º semestre) - Universidade Cruzeiro do Sul",
-    "knowsAbout": ["Python", "SQL", "BigQuery", "Apache Airflow", "GCP", "GitHub", "Vercel", "React", "TypeScript"]
-  }
+    name: "Ivanilda Braga Loiola",
+    jobTitle: "Engenheira de Dados & Desenvolvedora Python",
+    description:
+      "Graduanda em Ciência da Computação (6º semestre) com sólida base acadêmica em lógica de programação, algoritmos e engenharia de dados. Experiência com Python, SQL, GCP (BigQuery, Airflow), automação e mídias sociais.",
+    educationalBackground: "Ciência da Computação (6º semestre) - Universidade Cruzeiro do Sul",
+    knowsAbout: [
+      "Python",
+      "SQL",
+      "BigQuery",
+      "Apache Airflow",
+      "GCP",
+      "GitHub",
+      "Vercel",
+      "React",
+      "TypeScript",
+    ],
+  },
 };
 
 export const Route = createFileRoute("/sobre")({
@@ -65,7 +96,7 @@ export const Route = createFileRoute("/sobre")({
       {
         name: "description",
         content:
-          "Ivanilda Rodrigues Braga: graduanda em Ciência da Computação (6º semestre) especialista em Engenharia de Dados, Python, SQL, GCP e automações em nuvem.",
+          "Ivanilda Braga Loiola: graduanda em Ciência da Computação (6º semestre) especialista em Engenharia de Dados, Python, SQL, GCP e automações em nuvem.",
       },
       { property: "og:title", content: "Sobre Mim — Ivanilda Braga" },
       {
@@ -76,9 +107,7 @@ export const Route = createFileRoute("/sobre")({
       { property: "og:type", content: "profile" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [
-      { rel: "canonical", href: "https://ivanildabraga.dev/sobre" }
-    ],
+    links: [{ rel: "canonical", href: "https://ivanildabraga.dev/sobre" }],
     scripts: [
       {
         type: "application/ld+json",
@@ -141,7 +170,7 @@ function Sobre() {
             <div className="clip-paper relative h-[320px] w-[240px] overflow-hidden md:h-[380px] md:w-[280px]">
               <img
                 src={fotoPortfolio}
-                alt="Retrato de Ivanilda Rodrigues Braga"
+                alt="Retrato de Ivanilda Braga Loiola"
                 className="h-full w-full object-cover"
               />
               <div className="pointer-events-none absolute inset-0 shadow-[inset_0_0_20px_rgba(0,0,0,0.2)]" />
@@ -197,7 +226,7 @@ function Sobre() {
           </h1>
 
           <p className="font-hand text-ink-soft mt-4 text-2xl md:text-3xl">
-            Ivanilda Rodrigues Braga — dados, código e curiosidade
+            Ivanilda Braga Loiola — dados, código e curiosidade
           </p>
 
           <div className="border-card-edge bg-card/70 mt-8 rounded-sm border p-6 shadow-[3px_3px_0px_rgba(0,0,0,0.08)] backdrop-blur-sm">
@@ -205,14 +234,13 @@ function Sobre() {
               Resumo profissional
             </h2>
             <p className="text-ink-soft mt-3 leading-relaxed">
-              Graduanda em Ciência da Computação (6º semestre) com sólida base acadêmica em
-              lógica de programação, estruturas de dados, algoritmos, redes e sistemas
-              operacionais. Tenho competências práticas em Python, SQL e manipulação de bases
-              de dados, aliando raciocínio analítico a uma trajetória com forte vivência em
-              resolução de problemas, tratamento de fluxos de informações e gestão de
-              processos dinâmicos. Estou motivada a atuar na área de Dados, aplicando
-              conhecimentos em extração, tratamento e estruturação de informações para apoiar
-              soluções tecnológicas eficientes.
+              Graduanda em Ciência da Computação (6º semestre) com sólida base acadêmica em lógica
+              de programação, estruturas de dados, algoritmos, redes e sistemas operacionais. Tenho
+              competências práticas em Python, SQL e manipulação de bases de dados, aliando
+              raciocínio analítico a uma trajetória com forte vivência em resolução de problemas,
+              tratamento de fluxos de informações e gestão de processos dinâmicos. Estou motivada a
+              atuar na área de Dados, aplicando conhecimentos em extração, tratamento e estruturação
+              de informações para apoiar soluções tecnológicas eficientes.
             </p>
           </div>
 
@@ -231,9 +259,7 @@ function Sobre() {
             ))}
           </div>
 
-          <h2 className="font-display mt-12 text-2xl font-bold md:text-3xl">
-            Formação acadêmica
-          </h2>
+          <h2 className="font-display mt-12 text-2xl font-bold md:text-3xl">Formação acadêmica</h2>
           <div className="border-card-edge bg-card/70 mt-5 rounded-sm border p-6 shadow-[3px_3px_0px_rgba(0,0,0,0.08)]">
             <h3 className="font-display flex items-center gap-2 text-lg font-bold">
               <GraduationCap size={20} aria-hidden="true" />
@@ -243,8 +269,8 @@ function Sobre() {
               Universidade Cruzeiro do Sul — cursando o 6º semestre
             </p>
             <p className="text-ink-soft mt-3 text-sm leading-relaxed">
-              Projetos relevantes: construção de pipelines ETL no GCP (BigQuery/Airflow),
-              automações com Python e IA, e controle de versão via Git/GitLab.
+              Projetos relevantes: construção de pipelines ETL no GCP (BigQuery/Airflow), automações
+              com Python e IA, e controle de versão via Git/GitLab.
             </p>
           </div>
 

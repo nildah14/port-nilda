@@ -1,5 +1,14 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowLeft, Share2, Wrench, LayoutGrid, ImagePlus, MessageCircle, Video, ExternalLink } from "lucide-react";
+import {
+  ArrowLeft,
+  Share2,
+  Wrench,
+  LayoutGrid,
+  ImagePlus,
+  MessageCircle,
+  Video,
+  ExternalLink,
+} from "lucide-react";
 import dlFitnessImg from "@/assets/clientes/dl-fitness.jpeg";
 import meryTavaresImg from "@/assets/clientes/merytavaress.png";
 import ostramarImg from "@/assets/clientes/ostramar.png";
@@ -79,33 +88,34 @@ const clientes = [
 const socialMediaJsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "Gestão de Mídias Sociais & Criação de Conteúdo",
-  "provider": {
+  name: "Gestão de Mídias Sociais & Criação de Conteúdo",
+  provider: {
     "@type": "Person",
-    "name": "Ivanilda Rodrigues Braga"
+    name: "Ivanilda Braga Loiola",
   },
-  "serviceType": "Social Media Management & Digital Marketing",
-  "description": "Estratégia de marca, planejamento de conteúdo, design e gestão de comunidade nas redes Instagram, Facebook e TikTok utilizando Canva, Photoshop, Figma, CapCut e mLabs.",
-  "hasOfferCatalog": {
+  serviceType: "Social Media Management & Digital Marketing",
+  description:
+    "Estratégia de marca, planejamento de conteúdo, design e gestão de comunidade nas redes Instagram, Facebook e TikTok utilizando Canva, Photoshop, Figma, CapCut e mLabs.",
+  hasOfferCatalog: {
     "@type": "OfferCatalog",
-    "name": "Ferramentas & Plataformas Gerenciadas",
-    "itemListElement": [
+    name: "Ferramentas & Plataformas Gerenciadas",
+    itemListElement: [
       {
         "@type": "Offer",
-        "itemOffered": {
+        itemOffered: {
           "@type": "Service",
-          "name": "Gestão de Instagram, Facebook & TikTok"
-        }
+          name: "Gestão de Instagram, Facebook & TikTok",
+        },
       },
       {
         "@type": "Offer",
-        "itemOffered": {
+        itemOffered: {
           "@type": "Service",
-          "name": "Design & Edição de Vídeos (Reels/TikToks)"
-        }
-      }
-    ]
-  }
+          name: "Design & Edição de Vídeos (Reels/TikToks)",
+        },
+      },
+    ],
+  },
 };
 
 export const Route = createFileRoute("/social-media")({
@@ -126,9 +136,7 @@ export const Route = createFileRoute("/social-media")({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [
-      { rel: "canonical", href: "https://ivanildabraga.dev/social-media" }
-    ],
+    links: [{ rel: "canonical", href: "https://ivanildabraga.dev/social-media" }],
     scripts: [
       {
         type: "application/ld+json",
@@ -140,14 +148,54 @@ export const Route = createFileRoute("/social-media")({
 });
 
 const ferramentas = [
-  { nome: "Canva", desc: "Design ágil & artes promocionais", color: "bg-accent-yellow", rot: "-rotate-1" },
-  { nome: "CapCut", desc: "Edição de vídeos curtos & Reels/TikToks", color: "bg-accent-blue", rot: "rotate-1" },
-  { nome: "Trello", desc: "Organização do calendário editorial", color: "bg-accent-green", rot: "-rotate-1" },
-  { nome: "Figma", desc: "Prototipagem visual & layouts de redes", color: "bg-accent-pink", rot: "rotate-1" },
-  { nome: "Photoshop", desc: "Tratamento de imagens & manipulação", color: "bg-card/90", rot: "-rotate-1" },
-  { nome: "Freepik", desc: "Recursos gráficos & elementos vetoriais", color: "bg-accent-yellow", rot: "rotate-1" },
-  { nome: "Pinterest", desc: "Pesquisa de tendências & moodboards", color: "bg-accent-blue", rot: "-rotate-1" },
-  { nome: "mLabs", desc: "Agendamento & gestão de métricas", color: "bg-accent-green", rot: "rotate-1" },
+  {
+    nome: "Canva",
+    desc: "Design ágil & artes promocionais",
+    color: "bg-accent-yellow",
+    rot: "-rotate-1",
+  },
+  {
+    nome: "CapCut",
+    desc: "Edição de vídeos curtos & Reels/TikToks",
+    color: "bg-accent-blue",
+    rot: "rotate-1",
+  },
+  {
+    nome: "Trello",
+    desc: "Organização do calendário editorial",
+    color: "bg-accent-green",
+    rot: "-rotate-1",
+  },
+  {
+    nome: "Figma",
+    desc: "Prototipagem visual & layouts de redes",
+    color: "bg-accent-pink",
+    rot: "rotate-1",
+  },
+  {
+    nome: "Photoshop",
+    desc: "Tratamento de imagens & manipulação",
+    color: "bg-card/90",
+    rot: "-rotate-1",
+  },
+  {
+    nome: "Freepik",
+    desc: "Recursos gráficos & elementos vetoriais",
+    color: "bg-accent-yellow",
+    rot: "rotate-1",
+  },
+  {
+    nome: "Pinterest",
+    desc: "Pesquisa de tendências & moodboards",
+    color: "bg-accent-blue",
+    rot: "-rotate-1",
+  },
+  {
+    nome: "mLabs",
+    desc: "Agendamento & gestão de métricas",
+    color: "bg-accent-green",
+    rot: "rotate-1",
+  },
 ];
 
 const plataformas = [
@@ -175,12 +223,48 @@ const plataformas = [
 ];
 
 const clientesPlaceholder = [
-  { id: 1, titulo: "Cliente / Marca #01", nicho: "Moda & Estilo de Vida", color: "bg-accent-yellow", rot: "-rotate-1" },
-  { id: 2, titulo: "Cliente / Marca #02", nicho: "Tecnologia & Serviços", color: "bg-accent-blue", rot: "rotate-1" },
-  { id: 3, titulo: "Cliente / Marca #03", nicho: "Gastronomia & Alimentação", color: "bg-accent-green", rot: "-rotate-2" },
-  { id: 4, titulo: "Cliente / Marca #04", nicho: "Saúde & Bem-Estar", color: "bg-accent-pink", rot: "rotate-1" },
-  { id: 5, titulo: "Cliente / Marca #05", nicho: "Educação & Cursos", color: "bg-card/90", rot: "-rotate-1" },
-  { id: 6, titulo: "Cliente / Marca #06", nicho: "E-Commerce & Varejo", color: "bg-accent-yellow", rot: "rotate-2" },
+  {
+    id: 1,
+    titulo: "Cliente / Marca #01",
+    nicho: "Moda & Estilo de Vida",
+    color: "bg-accent-yellow",
+    rot: "-rotate-1",
+  },
+  {
+    id: 2,
+    titulo: "Cliente / Marca #02",
+    nicho: "Tecnologia & Serviços",
+    color: "bg-accent-blue",
+    rot: "rotate-1",
+  },
+  {
+    id: 3,
+    titulo: "Cliente / Marca #03",
+    nicho: "Gastronomia & Alimentação",
+    color: "bg-accent-green",
+    rot: "-rotate-2",
+  },
+  {
+    id: 4,
+    titulo: "Cliente / Marca #04",
+    nicho: "Saúde & Bem-Estar",
+    color: "bg-accent-pink",
+    rot: "rotate-1",
+  },
+  {
+    id: 5,
+    titulo: "Cliente / Marca #05",
+    nicho: "Educação & Cursos",
+    color: "bg-card/90",
+    rot: "-rotate-1",
+  },
+  {
+    id: 6,
+    titulo: "Cliente / Marca #06",
+    nicho: "E-Commerce & Varejo",
+    color: "bg-accent-yellow",
+    rot: "rotate-2",
+  },
 ];
 
 function SocialMedia() {
@@ -214,7 +298,8 @@ function SocialMedia() {
             Ferramentas de Trabalho
           </h2>
           <p className="text-ink-soft mt-2 text-base">
-            Softwares e plataformas utilizadas no dia a dia para planejamento, design, edição e agendamento:
+            Softwares e plataformas utilizadas no dia a dia para planejamento, design, edição e
+            agendamento:
           </p>
 
           <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -237,7 +322,8 @@ function SocialMedia() {
             Plataformas Gerenciadas
           </h2>
           <p className="text-ink-soft mt-2 text-base">
-            Canais de comunicação social com estratégia focada no público-alvo e posicionamento de marca:
+            Canais de comunicação social com estratégia focada no público-alvo e posicionamento de
+            marca:
           </p>
 
           <div className="mt-6 grid gap-6 md:grid-cols-3">
@@ -299,9 +385,7 @@ function SocialMedia() {
                   />
                 </div>
 
-                <p className="text-ink-soft mb-4 text-sm font-medium leading-relaxed">
-                  {c.desc}
-                </p>
+                <p className="text-ink-soft mb-4 text-sm font-medium leading-relaxed">{c.desc}</p>
 
                 <div className="flex justify-end">
                   {c.href ? (

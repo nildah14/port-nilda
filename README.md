@@ -9,18 +9,21 @@ Este projeto é mantido via edições manuais no código-fonte local, sem depend
 ### Pré-requisitos
 
 Para rodar e editar o projeto localmente, certifique-se de ter instalado:
+
 - **Node.js** (versão 18 ou superior)
 - **npm**, **yarn** ou **bun**
 
 ### Passo a Passo para Execução Local
 
 1. **Clonar o repositório:**
+
    ```sh
    git clone <url-do-repositorio>
    cd <nome-do-repositorio>
    ```
 
 2. **Instalar as dependências:**
+
    ```sh
    npm install
    ```
@@ -60,22 +63,25 @@ Para rodar e editar o projeto localmente, certifique-se de ter instalado:
 Após realizar suas edições manuais, siga os passos abaixo para gerar e testar a build final:
 
 1. **Verificar formatação e erros de lint:**
+
    ```sh
    npm run lint
    npm run format
    ```
 
 2. **Gerar a build de produção:**
+
    ```sh
    npm run build
    ```
+
    Este comando executa a compilação do Vite e gera a versão otimizada da aplicação.
 
 3. **Testar a build localmente:**
+
    ```sh
    npm run preview
    ```
 
 4. **Hospedagem / Deploy:**
    - A build gerada está pronta para ser implantada em plataformas como Vercel, Netlify, Cloudflare Pages ou qualquer servidor Node.js/estático.
-

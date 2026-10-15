@@ -8,12 +8,13 @@ export const Route = createFileRoute("/trajetoria")({
       {
         name: "description",
         content:
-          "Trajetória profissional e acadêmica de Ivanilda Rodrigues Braga: Engenharia de Dados, Automação, Gestão de Operações e Ciência da Computação.",
+          "Trajetória profissional e acadêmica de Ivanilda Braga Loiola: Engenharia de Dados, Automação, Gestão de Operações e Ciência da Computação.",
       },
       { property: "og:title", content: "Conheça Minha Trajetória — Ivanilda Braga" },
       {
         property: "og:description",
-        content: "Histórico profissional, cargos, formação e evolução de competências em tecnologia e dados.",
+        content:
+          "Histórico profissional, cargos, formação e evolução de competências em tecnologia e dados.",
       },
       { property: "og:type", content: "profile" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -76,8 +77,7 @@ const experiencias = [
     cargo: "Atendente e Operador de Caixa",
     empresa: "Shopping 10",
     periodo: "2020 – 2022",
-    descricao:
-      "Atendimento ao público, conciliação financeira de vendas e suporte operacional.",
+    descricao: "Atendimento ao público, conciliação financeira de vendas e suporte operacional.",
     responsabilidades: [
       "Registro de compras e conciliação de pagamentos em múltiplas formas eletrônicas e dinheiro.",
       "Abertura, controle de troco e fechamento de caixa com conferência rigorosa de valores.",
@@ -134,7 +134,9 @@ function Trajetoria() {
             </div>
           </div>
           <p className="text-ink-soft mt-3 text-base leading-relaxed">
-            Sólida formação em lógica de programação, estruturas de dados, algoritmos, redes de computadores e sistemas operacionais. Foco de estudo prático voltado para Engenharia de Dados, Linguagens de Programação (Python, SQL, Java) e Cloud Computing.
+            Sólida formação em lógica de programação, estruturas de dados, algoritmos, redes de
+            computadores e sistemas operacionais. Foco de estudo prático voltado para Engenharia de
+            Dados, Linguagens de Programação (Python, SQL, Java) e Cloud Computing.
           </p>
         </div>
 
@@ -164,9 +166,7 @@ function Trajetoria() {
                           </span>
                         )}
                       </div>
-                      <p className="font-hand text-ink-soft text-xl font-semibold">
-                        {exp.empresa}
-                      </p>
+                      <p className="font-hand text-ink-soft text-xl font-semibold">{exp.empresa}</p>
                     </div>
 
                     <div className="font-display bg-paper/90 text-ink flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-bold shadow-xs w-fit">
@@ -175,13 +175,14 @@ function Trajetoria() {
                     </div>
                   </div>
 
-                  <p className="text-ink-soft mt-3 text-base leading-relaxed">
-                    {exp.descricao}
-                  </p>
+                  <p className="text-ink-soft mt-3 text-base leading-relaxed">{exp.descricao}</p>
 
                   <ul className="mt-4 space-y-2">
                     {exp.responsabilidades.map((resp, idx) => (
-                      <li key={idx} className="text-ink flex items-start gap-2 text-sm md:text-base">
+                      <li
+                        key={idx}
+                        className="text-ink flex items-start gap-2 text-sm md:text-base"
+                      >
                         <CheckCircle2 size={16} className="mt-1 shrink-0 opacity-70" />
                         <span>{resp}</span>
                       </li>

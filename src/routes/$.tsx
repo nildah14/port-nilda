@@ -18,9 +18,13 @@ function NotFoundPage() {
       <div className="mx-auto flex max-w-4xl flex-col items-center gap-6 text-center">
         {/* Título Principal 404 */}
         <h1 className="font-display text-center text-7xl font-extrabold tracking-tighter opacity-90 mix-blend-multiply sm:text-8xl md:text-9xl">
-          <span className="inline-block origin-bottom-right -rotate-3 transform text-accent-pink">4</span>
+          <span className="inline-block origin-bottom-right -rotate-3 transform text-accent-pink">
+            4
+          </span>
           <span className="inline-block rotate-2 transform text-accent-yellow">0</span>
-          <span className="inline-block origin-bottom-left -rotate-2 transform text-accent-blue">4</span>
+          <span className="inline-block origin-bottom-left -rotate-2 transform text-accent-blue">
+            4
+          </span>
         </h1>
 
         <div className="flex flex-col items-center gap-2">
@@ -28,7 +32,8 @@ function NotFoundPage() {
             Ops! Essa página sumiu no meio do código... 🐍
           </h2>
           <p className="font-hand text-ink-soft max-w-md text-xl md:text-2xl">
-            O caminho digitado não existe! Que tal jogar uma partida retro de Snake II enquanto se reconecta?
+            O caminho digitado não existe! Que tal jogar uma partida retro de Snake II enquanto se
+            reconecta?
           </p>
         </div>
 

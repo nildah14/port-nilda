@@ -10,4 +10,3 @@
   - `npm run build`: Executa o build de produção via Vite / Nitro.
   - `npm run lint`: Executa a verificação com ESLint.
   - `npm run format`: Formata os arquivos do projeto via Prettier.
-

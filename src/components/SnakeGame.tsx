@@ -25,7 +25,7 @@ export default function SnakeGame() {
   dirRef.current = dir;
 
   const generateFood = useCallback((currentSnake: { x: number; y: number }[]) => {
-    let newFood;
+    let newFood: { x: number; y: number } = { x: 0, y: 0 };
     while (true) {
       newFood = {
         x: Math.floor(Math.random() * GRID_SIZE),
@@ -101,9 +101,12 @@ export default function SnakeGame() {
 
     const timer = setInterval(() => {
       setSnake((prevSnake) => {
+        const currentHead = prevSnake[0];
+        if (!currentHead) return prevSnake;
+
         const head = {
-          x: prevSnake[0].x + dirRef.current.x,
-          y: prevSnake[0].y + dirRef.current.y,
+          x: currentHead.x + dirRef.current.x,
+          y: currentHead.y + dirRef.current.y,
         };
 
         // Wall collision (teleport / wrap around like Nokia Snake 2)
@@ -170,7 +173,7 @@ export default function SnakeGame() {
               const x = index % GRID_SIZE;
               const y = Math.floor(index / GRID_SIZE);
 
-              const isHead = snake[0].x === x && snake[0].y === y;
+              const isHead = Boolean(snake[0] && snake[0].x === x && snake[0].y === y);
               const isBody = snake.some((seg) => seg.x === x && seg.y === y);
               const isFood = food.x === x && food.y === y;
 
