@@ -129,7 +129,7 @@ function Trajetoria() {
                 Formação Acadêmica & Base Técnica
               </h2>
               <p className="font-hand text-ink-soft text-xl">
-                Ciência da Computação — Universidade Cruzeiro do Sul (Cursando o 5º Semestre)
+                Ciência da Computação — Universidade Cruzeiro do Sul (Cursando o 6º Semestre)
               </p>
             </div>
           </div>

@@ -100,7 +100,7 @@ const globalJsonLd = {
       "@id": "https://ivanildabraga.dev/#person",
       "name": "Ivanilda Rodrigues Braga",
       "jobTitle": "Engenheira de Dados & Desenvolvedora Python",
-      "description": "Estudante de Ciência da Computação (5º Semestre) com foco em Engenharia de Dados, pipelines GCP (BigQuery, Airflow, Medallion Architecture), automação em Python, SQL e mídias sociais.",
+      "description": "Estudante de Ciência da Computação (6º Semestre) com foco em Engenharia de Dados, pipelines GCP (BigQuery, Airflow, Medallion Architecture), automação em Python, SQL e mídias sociais.",
       "almaMater": {
         "@type": "EducationalOrganization",
         "name": "Universidade Cruzeiro do Sul"

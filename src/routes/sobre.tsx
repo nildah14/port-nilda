@@ -52,8 +52,8 @@ const sobreJsonLd = {
     "@type": "Person",
     "name": "Ivanilda Rodrigues Braga",
     "jobTitle": "Engenheira de Dados & Desenvolvedora Python",
-    "description": "Graduanda em Ciência da Computação (5º semestre) com sólida base acadêmica em lógica de programação, algoritmos e engenharia de dados. Experiência com Python, SQL, GCP (BigQuery, Airflow), automação e mídias sociais.",
-    "educationalBackground": "Ciência da Computação (5º semestre) - Universidade Cruzeiro do Sul",
+    "description": "Graduanda em Ciência da Computação (6º semestre) com sólida base acadêmica em lógica de programação, algoritmos e engenharia de dados. Experiência com Python, SQL, GCP (BigQuery, Airflow), automação e mídias sociais.",
+    "educationalBackground": "Ciência da Computação (6º semestre) - Universidade Cruzeiro do Sul",
     "knowsAbout": ["Python", "SQL", "BigQuery", "Apache Airflow", "GCP", "GitHub", "Vercel", "React", "TypeScript"]
   }
 };
@@ -65,7 +65,7 @@ export const Route = createFileRoute("/sobre")({
       {
         name: "description",
         content:
-          "Ivanilda Rodrigues Braga: graduanda em Ciência da Computação (5º semestre) especialista em Engenharia de Dados, Python, SQL, GCP e automações em nuvem.",
+          "Ivanilda Rodrigues Braga: graduanda em Ciência da Computação (6º semestre) especialista em Engenharia de Dados, Python, SQL, GCP e automações em nuvem.",
       },
       { property: "og:title", content: "Sobre Mim — Ivanilda Braga" },
       {
@@ -205,7 +205,7 @@ function Sobre() {
               Resumo profissional
             </h2>
             <p className="text-ink-soft mt-3 leading-relaxed">
-              Graduanda em Ciência da Computação (5º semestre) com sólida base acadêmica em
+              Graduanda em Ciência da Computação (6º semestre) com sólida base acadêmica em
               lógica de programação, estruturas de dados, algoritmos, redes e sistemas
               operacionais. Tenho competências práticas em Python, SQL e manipulação de bases
               de dados, aliando raciocínio analítico a uma trajetória com forte vivência em
@@ -240,7 +240,7 @@ function Sobre() {
               Ciência da Computação
             </h3>
             <p className="font-hand text-ink-soft mt-1 text-xl">
-              Universidade Cruzeiro do Sul — cursando o 5º semestre
+              Universidade Cruzeiro do Sul — cursando o 6º semestre
             </p>
             <p className="text-ink-soft mt-3 text-sm leading-relaxed">
               Projetos relevantes: construção de pipelines ETL no GCP (BigQuery/Airflow),

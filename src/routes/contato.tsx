@@ -18,7 +18,7 @@ const contatoJsonLd = {
           "name": "Quais são as principais especialidades de Ivanilda Rodrigues Braga?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Ivanilda Rodrigues Braga é graduanda em Ciência da Computação (5º semestre) especializada em Engenharia de Dados no Google Cloud Platform (BigQuery, Apache Airflow, Arquitetura Medallion), desenvolvimento em Python, SQL e Gestão de Mídias Sociais."
+            "text": "Ivanilda Rodrigues Braga é graduanda em Ciência da Computação (6º semestre) especializada em Engenharia de Dados no Google Cloud Platform (BigQuery, Apache Airflow, Arquitetura Medallion), desenvolvimento em Python, SQL e Gestão de Mídias Sociais."
           }
         },
         {
@@ -145,7 +145,7 @@ function Contato() {
 
           <div className="border-card-edge bg-card/70 mt-8 rounded-sm border p-6 shadow-[3px_3px_0px_rgba(0,0,0,0.08)] backdrop-blur-sm">
             <p className="text-ink-soft leading-relaxed">
-              Sou estudante de Ciência da Computação (5º semestre), com conhecimentos em Python, GCP, SQL e automação. Tenho interesse em Engenharia de Dados, Desenvolvimento de Software, Cloud e outras áreas de TI que me permitam evoluir tecnicamente. Busco oportunidades para aplicar meus conhecimentos, aprender continuamente e contribuir com soluções de impacto.
+              Sou estudante de Ciência da Computação (6º semestre), com conhecimentos em Python, GCP, SQL e automação. Tenho interesse em Engenharia de Dados, Desenvolvimento de Software, Cloud e outras áreas de TI que me permitam evoluir tecnicamente. Busco oportunidades para aplicar meus conhecimentos, aprender continuamente e contribuir com soluções de impacto.
             </p>
           </div>
 
